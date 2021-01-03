@@ -1,7 +1,9 @@
 const {Router} = require('express');
 const bcrypt = require('bcryptjs');
 const {check, validationResult} = require('express-validator');
+const jwt = require('jsonwebtoken');
 const User = require('../models/User');
+const config = require('../config/default.json')
 
 const router = Router();
 
@@ -51,15 +53,35 @@ router.post(
         check('password', "Invalid password").exists()
     ],
     async (req, res) => {
-    try {
-        const errors = validationResult(req)
+        try {
+            const errors = validationResult(req)
 
-        if (!errors.isEmpty()) {
-            return res.status(400).json({errors: errors.array(), message: "Invalid user register data."})
+            if (!errors.isEmpty()) {
+                return res.status(400).json({errors: errors.array(), message: "Invalid user register data."})
+            }
+            const {email, password} = req.body;
+            const user = await User.findOne({email});
+            if (!user) {
+                return res.status(400).json({message: "User dose not exist."});
+            }
+
+            const isPasswordsMatch = await bcrypt.compare(password, user.password);
+
+            if(!isPasswordsMatch){
+                return res.status(400).json({message: "Invalid password."});
+            }
+
+            const token = jwt.sign(
+                {userId:user.id},
+                config.jwtSecret,
+                {expiresIn: "1h"}
+            );
+
+            res.json({token,userId:user.id});
+
+        } catch (e) {
+            res.status(500).json({message: "Something went wrong."});
         }
-    } catch (e) {
-        res.status(500).json({message: "Something went wrong."});
-    }
-})
+    })
 
 module.exports = router

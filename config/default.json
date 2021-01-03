@@ -1,4 +1,5 @@
 {
   "port": 5000,
+  "jwtSecret": "Roman-MERN_App_Secret-Token",
   "mongoUri": "mongodb+srv://roman:roma123@cluster0.infag.mongodb.net/app?retryWrites=true&w=majority"
 }
