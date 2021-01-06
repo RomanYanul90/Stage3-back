@@ -1,12 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1b57e755-6e85-4ce4-80b4-936e54f1958e" name="Default Changelist" comment="Create user and register">
+    <list default="true" id="1b57e755-6e85-4ce4-80b4-936e54f1958e" name="Default Changelist" comment="json web token for auth">
+      <change afterPath="$PROJECT_DIR$/client/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/pages/AdvertsPage.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/pages/AuthPage.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/pages/CreateAdvertPage.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/reportWebVitals.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/routes.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/setupTests.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/default.json" beforeDir="false" afterPath="$PROJECT_DIR$/config/default.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/auth-routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/auth-routes.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,7 +40,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Stage3" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/expensify-app" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -49,7 +54,9 @@
       <updated>1609615649765</updated>
       <workItem from="1609615650928" duration="5036000" />
       <workItem from="1609622264759" duration="340000" />
-      <workItem from="1609695745279" duration="9142000" />
+      <workItem from="1609695745279" duration="9759000" />
+      <workItem from="1609709668163" duration="58000" />
+      <workItem from="1609945862880" duration="10639000" />
     </task>
     <task id="LOCAL-00001" summary="Create user and register">
       <created>1609707672303</created>
@@ -58,7 +65,14 @@
       <option name="project" value="LOCAL" />
       <updated>1609707672303</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="json web token for auth">
+      <created>1609709163326</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1609709163326</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -78,6 +92,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Create user and register" />
-    <option name="LAST_COMMIT_MESSAGE" value="Create user and register" />
+    <MESSAGE value="json web token for auth" />
+    <option name="LAST_COMMIT_MESSAGE" value="json web token for auth" />
   </component>
 </project>
