@@ -1,18 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1b57e755-6e85-4ce4-80b4-936e54f1958e" name="Default Changelist" comment="json web token for auth">
-      <change afterPath="$PROJECT_DIR$/client/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/pages/AdvertsPage.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/pages/AuthPage.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/pages/CreateAdvertPage.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/reportWebVitals.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/routes.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/setupTests.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/default.json" beforeDir="false" afterPath="$PROJECT_DIR$/config/default.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-    </list>
+    <list default="true" id="1b57e755-6e85-4ce4-80b4-936e54f1958e" name="Default Changelist" comment="Add client by create react app, add pages" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -56,7 +45,7 @@
       <workItem from="1609622264759" duration="340000" />
       <workItem from="1609695745279" duration="9759000" />
       <workItem from="1609709668163" duration="58000" />
-      <workItem from="1609945862880" duration="10639000" />
+      <workItem from="1609945862880" duration="10713000" />
     </task>
     <task id="LOCAL-00001" summary="Create user and register">
       <created>1609707672303</created>
@@ -72,7 +61,14 @@
       <option name="project" value="LOCAL" />
       <updated>1609709163326</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Add client by create react app, add pages">
+      <created>1609966842739</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1609966842739</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -93,6 +89,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Create user and register" />
     <MESSAGE value="json web token for auth" />
-    <option name="LAST_COMMIT_MESSAGE" value="json web token for auth" />
+    <MESSAGE value="Add client by create react app, add pages" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add client by create react app, add pages" />
   </component>
 </project>
