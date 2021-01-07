@@ -1,8 +1,8 @@
 import React from 'react'
 import {Switch,Route,Redirect} from 'react-router-dom'
-import {AdvertsPage} from "./pages/AdvertsPage";
-import {CreateAdvertPage} from "./pages/CreateAdvertPage";
-import {AuthPage} from "./pages/AuthPage";
+import {AdvertsPage} from "./components/AdvertsPage";
+import {CreateAdvertPage} from "./components/CreateAdvertPage";
+import {Dashboard} from "./components/Dashboard";
 
 export const useRoutes = isAuth => {
     if(isAuth){
@@ -11,23 +11,19 @@ export const useRoutes = isAuth => {
                 <Route path='/adverts' exact>
                     <AdvertsPage/>
                 </Route>
-                <Route path='/create' exact>
+                <Route path='/createAdvert' exact>
                     <CreateAdvertPage/>
                 </Route>
-                {/*<Route path='/advert' exact>*/}
-                {/*    <AdvertsPage/>*/}
-                {/*</Route>*/}
-                <Redirect to='/create' />
+                <Redirect to='/createAdvert' />
             </Switch>
         )
     }
     return (
         <Switch>
             <Route path='/'>
-                <AuthPage/>
+                <Dashboard/>
             </Route>
             <Redirect to='/' />
-
         </Switch>
     )
 }
