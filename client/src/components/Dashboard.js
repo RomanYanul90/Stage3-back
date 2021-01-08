@@ -1,7 +1,7 @@
 import React from 'react'
 import {Link, Redirect, Route, Switch} from "react-router-dom";
 import {CreateUserPage} from "./CreateUserPage";
-import {AuthPage} from "./AuthPage";
+import {LoginPage} from "./LoginPage";
 
 export const Dashboard = () => {
     return (
@@ -11,13 +11,13 @@ export const Dashboard = () => {
                     <CreateUserPage/>
                 </Route>
                 <Route path='/login'>
-                    <AuthPage/>
+                    <LoginPage/>
                 </Route>
                 <Redirect to='/' />
             </Switch>
             <div>
                 <Link to='/register'>Create user</Link>
-                <Link to='/login'>Auth</Link>
+                <Link to='/login'>Log in</Link>
             </div>
         </div>
 

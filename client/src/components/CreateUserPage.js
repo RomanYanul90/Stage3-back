@@ -1,9 +1,10 @@
-import React, {useState,useEffect} from 'react'
+import React, {useState,useEffect,useContext} from 'react'
 import {useHttp} from "../hooks/httpHook";
 import {useMessage} from "../hooks/errorHook";
+import {AuthContext} from "../context/AuthContext";
 
 export const CreateUserPage = () => {
-
+    // const auth = useContext(AuthContext)
     const {loading, error, request, clearError} = useHttp()
 
     const [form, setForm] = useState({
@@ -14,7 +15,6 @@ export const CreateUserPage = () => {
         phone: "",
         password: "",
     })
-    //
     const message = useMessage()
     useEffect(() => {
         message(error)
@@ -30,7 +30,8 @@ export const CreateUserPage = () => {
 
         try {
             const data = await request('/api/auth/register', "POST", {...form})
-            console.log("Data", data)
+            message(data.message)
+            // console.log("Data", data)
         } catch (e) {
         }
     }
