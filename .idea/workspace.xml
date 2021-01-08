@@ -1,23 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1b57e755-6e85-4ce4-80b4-936e54f1958e" name="Default Changelist" comment="Add client by create react app, add pages">
-      <change afterPath="$PROJECT_DIR$/client/src/components/AuthPage.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/components/CreateUserPage.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/components/Dashboard.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/hooks/httpHook.js" afterDir="false" />
+    <list default="true" id="1b57e755-6e85-4ce4-80b4-936e54f1958e" name="Default Changelist" comment="Create user and write user data to the database">
+      <change afterPath="$PROJECT_DIR$/client/src/hooks/errorHook.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/.eslintcache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/pages/AdvertsPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/AdvertsPage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/pages/AuthPage.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/pages/CreateAdvertPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/CreateAdvertPage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/routes.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/setupTests.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/auth-routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/auth-routes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/CreateUserPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/CreateUserPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/hooks/httpHook.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/hooks/httpHook.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,7 +51,8 @@
       <workItem from="1609695745279" duration="9759000" />
       <workItem from="1609709668163" duration="58000" />
       <workItem from="1609945862880" duration="10713000" />
-      <workItem from="1610024878446" duration="13209000" />
+      <workItem from="1610024878446" duration="13541000" />
+      <workItem from="1610118067877" duration="3855000" />
     </task>
     <task id="LOCAL-00001" summary="Create user and register">
       <created>1609707672303</created>
@@ -86,7 +75,14 @@
       <option name="project" value="LOCAL" />
       <updated>1609966842739</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Create user and write user data to the database">
+      <created>1610055143625</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1610055143625</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -108,6 +104,7 @@
     <MESSAGE value="Create user and register" />
     <MESSAGE value="json web token for auth" />
     <MESSAGE value="Add client by create react app, add pages" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add client by create react app, add pages" />
+    <MESSAGE value="Create user and write user data to the database" />
+    <option name="LAST_COMMIT_MESSAGE" value="Create user and write user data to the database" />
   </component>
 </project>

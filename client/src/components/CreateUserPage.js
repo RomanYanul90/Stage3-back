@@ -1,5 +1,6 @@
 import React, {useState,useEffect} from 'react'
 import {useHttp} from "../hooks/httpHook";
+import {useMessage} from "../hooks/errorHook";
 
 export const CreateUserPage = () => {
 
@@ -14,13 +15,13 @@ export const CreateUserPage = () => {
         password: "",
     })
     //
+    const message = useMessage()
     useEffect(() => {
-        alert(error)
-        // clearError()
-    }, [error])
+        message(error)
+        clearError()
+    }, [error,message,clearError])
 
     const changeHandler = (e) => {
-        // e.preventDefault()
         setForm({...form, [e.target.name]: e.target.value})
     }
 
@@ -37,7 +38,7 @@ export const CreateUserPage = () => {
     return (
         <div>
             <h2>Create user</h2>
-            <form>
+            <form >
                 <div>
                     <label>First name</label>
                     <input type="text" name="firstName" onChange={changeHandler}/>
