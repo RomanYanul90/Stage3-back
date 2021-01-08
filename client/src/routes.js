@@ -1,15 +1,19 @@
 import React from 'react'
 import {Switch,Route,Redirect} from 'react-router-dom'
-import {AdvertsPage} from "./components/AdvertsPage";
+import {UserAdvertsPage} from "./components/UserAdvertsPage";
 import {CreateAdvertPage} from "./components/CreateAdvertPage";
+import {AllAdvertsPage} from "./components/AllAdvertsPage";
 import {Dashboard} from "./components/Dashboard";
 
 export const useRoutes = isAuth => {
     if(isAuth){
         return (
             <Switch>
-                <Route path='/adverts' exact>
-                    <AdvertsPage/>
+                <Route path='/allAdverts' exact>
+                    <AllAdvertsPage/>
+                </Route>
+                <Route path='/userAdverts' exact>
+                    <UserAdvertsPage/>
                 </Route>
                 <Route path='/createAdvert' exact>
                     <CreateAdvertPage/>
