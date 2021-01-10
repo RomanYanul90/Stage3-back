@@ -16,6 +16,7 @@ export const CreateUserPage = () => {
         password: "",
     })
     const message = useMessage()
+
     useEffect(() => {
         message(error)
         clearError()

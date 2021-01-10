@@ -20,6 +20,7 @@ export const Navbar = () => {
                 <li><NavLink to='/createAdvert'>Create</NavLink></li>
                 <li><NavLink to='/userAdverts'>My adverts</NavLink></li>
                 <li><NavLink to='/allAdverts'>All adverts</NavLink></li>
+                <li><NavLink to='/usersList'>All users</NavLink></li>
                 <li><a href='/' onClick={logoutHandler}>Log out</a></li>
             </ul>
         </nav>

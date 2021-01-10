@@ -1,10 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1b57e755-6e85-4ce4-80b4-936e54f1958e" name="Default Changelist" comment="Add navbar and new routes">
-      <change afterPath="$PROJECT_DIR$/models/Advert.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/routes/advert-routes.js" afterDir="false" />
+    <list default="true" id="1b57e755-6e85-4ce4-80b4-936e54f1958e" name="Default Changelist" comment="Advert model added">
+      <change afterPath="$PROJECT_DIR$/client/src/components/AdvertPage.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/UsersList.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/middleware/auth-middleware.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/public/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/client/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/CreateAdvertPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/CreateAdvertPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/CreateUserPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/CreateUserPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/Navbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Navbar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/hooks/authHook.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/hooks/authHook.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/routes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/default.json" beforeDir="false" afterPath="$PROJECT_DIR$/config/default.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/Advert.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/Advert.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/advert-routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/advert-routes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/auth-routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/auth-routes.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,7 +68,10 @@
       <workItem from="1609709668163" duration="58000" />
       <workItem from="1609945862880" duration="10713000" />
       <workItem from="1610024878446" duration="13541000" />
-      <workItem from="1610118067877" duration="13313000" />
+      <workItem from="1610118067877" duration="13338000" />
+      <workItem from="1610216135218" duration="1998000" />
+      <workItem from="1610230765960" duration="947000" />
+      <workItem from="1610286924597" duration="13294000" />
     </task>
     <task id="LOCAL-00001" summary="Create user and register">
       <created>1609707672303</created>
@@ -104,7 +122,14 @@
       <option name="project" value="LOCAL" />
       <updated>1610136915571</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Advert model added">
+      <created>1610140184134</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1610140184134</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -130,6 +155,7 @@
     <MESSAGE value="Correct error handler" />
     <MESSAGE value="Auth process and save token to localStorage" />
     <MESSAGE value="Add navbar and new routes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add navbar and new routes" />
+    <MESSAGE value="Advert model added" />
+    <option name="LAST_COMMIT_MESSAGE" value="Advert model added" />
   </component>
 </project>

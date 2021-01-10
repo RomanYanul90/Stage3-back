@@ -10,10 +10,10 @@ function App() {
     const isAuth = !!token
     const routes = useRoutes(isAuth)
     return (
-        <AuthContext.Provider value={{token, userId, login, logout,isAuth}}>
+        <AuthContext.Provider value={{token, userId, login, logout, isAuth}}>
 
             <Router>
-                {isAuth&&<Navbar/>}
+                {isAuth && <Navbar/>}
                 {routes}
             </Router>
         </AuthContext.Provider>
