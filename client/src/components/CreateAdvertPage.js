@@ -1,10 +1,13 @@
 import React, {useState, useEffect, useContext} from 'react'
 import {useHttp} from "../hooks/httpHook";
 import {useMessage} from "../hooks/errorHook";
+import { useHistory } from "react-router-dom";
+
 
 import {AuthContext} from "../context/AuthContext";
 
 export const CreateAdvertPage = () => {
+    const history = useHistory()
     const auth = useContext(AuthContext)
     const {error, request, clearError} = useHttp()
     const [form, setForm] = useState({
@@ -28,9 +31,9 @@ export const CreateAdvertPage = () => {
 
         try {
             const data = await request('/api/advert/create', "POST", {...form}, {Authorization: `Bearer ${auth.token}`})
-            console.log(data)
+            history.push(`/advert/${data.advert._id}`)
+
             message(data.message)
-            // console.log("Data", data)
         } catch (e) {
         }
     }

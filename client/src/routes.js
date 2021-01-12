@@ -20,7 +20,7 @@ export const useRoutes = isAuth => {
                 <Route path='/userAdverts' exact>
                     <UserAdvertsPage/>
                 </Route>
-                <Route path='/details/:id' exact>
+                <Route path='/advert/:id' exact>
                     <AdvertPage/>
                 </Route>
                 <Route path='/createAdvert' exact>
