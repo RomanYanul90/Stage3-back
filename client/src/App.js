@@ -4,7 +4,7 @@ import {useRoutes} from "./routes";
 import {useAuth} from "./hooks/authHook";
 import {AuthContext} from "./context/AuthContext";
 import {Navbar} from "./components/Navbar";
-import LoadingPage from "./components/LoadingPage";
+import {LoadingPage} from "./components/LoadingPage";
 
 function App() {
     const {token, userId, login, logout,ready} = useAuth()

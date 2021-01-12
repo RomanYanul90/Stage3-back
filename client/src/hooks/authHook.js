@@ -4,8 +4,8 @@ const userData = 'userData'
 
 export const useAuth = () => {
     const [token, setToken] = useState(null)
-    const [userId,setReady] = useState(false)
-    const [ready,setUserId] = useState(null)
+    const [ready,setReady] = useState(false)
+    const [userId,setUserId] = useState(null)
 
     const login = useCallback((jwt,id)=>{
         setToken(jwt)
