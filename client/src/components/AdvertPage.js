@@ -1,4 +1,4 @@
-import React, {useState, useCallback, useContext,useEffect} from 'react'
+import React, {useState, useCallback, useContext, useEffect} from 'react'
 import {useParams} from "react-router-dom";
 import {useHttp} from "../hooks/httpHook";
 import {AuthContext} from "../context/AuthContext";
@@ -16,15 +16,14 @@ export const AdvertPage = () => {
             const result = await request(`/api/advert/${advertId}`, "GET", null, {Authorization: `Bearer ${token}`})
             setAdvert(result)
         } catch (e) {
-
         }
     }, [token, advertId, request])
 
-    useEffect(()=>{
+    useEffect(() => {
         getAdvert()
-    },[getAdvert])
+    }, [getAdvert])
 
-    if(loading){
+    if (loading) {
         return <LoadingPage/>
     }
     return (

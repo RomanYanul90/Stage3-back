@@ -35,7 +35,7 @@ router.post(
 
 router.get('/', auth, async (req, res) => {
     try {
-        const adverts = await Advert.find({owner: req.user.userId})
+        const adverts = await Advert.find({creator: req.user.userId})
         res.json(adverts)
     } catch (e) {
         res.status(500).json({message: "Something went wrong."});
