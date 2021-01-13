@@ -27,7 +27,8 @@ router.post(
         check('email', "Invalid email").normalizeEmail().isEmail(),
         check('password', "Invalid password").exists()
     ],
-    LoginUserController.LoginUser)
+    LoginUserController.LoginUser
+)
 
 router.get('/', auth, async (req, res) => {
         try {
