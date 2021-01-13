@@ -1,7 +1,9 @@
 const {Router} = require('express');
 const {check} = require('express-validator');
+const User = require('../models/User');
 const CreateUserController = require('../controllers/CreateUserController');
 const LoginUserController = require('../controllers/LoginUserController')
+const auth = require('../middleware/auth-middleware');
 
 const router = Router();
 
@@ -27,4 +29,12 @@ router.post(
     ],
     LoginUserController.LoginUser)
 
+router.get('/', auth, async (req, res) => {
+        try {
+                const users = await User.find()
+                res.json(users)
+        } catch (e) {
+                res.status(500).json({message: "Something went wrong."});
+        }
+})
 module.exports = router

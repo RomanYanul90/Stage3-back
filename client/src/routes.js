@@ -6,6 +6,7 @@ import {AllAdvertsPage} from "./components/AllAdvertsPage";
 import {Dashboard} from "./components/Dashboard";
 import {UsersList} from "./components/UsersList";
 import {AdvertPage} from "./components/AdvertPage";
+import {AllUsersPage} from "./components/AllUsersPage";
 
 export const useRoutes = isAuth => {
     if(isAuth){
@@ -15,7 +16,7 @@ export const useRoutes = isAuth => {
                     <AllAdvertsPage/>
                 </Route>
                 <Route path='/usersList' exact>
-                    <UsersList/>
+                    <AllUsersPage/>
                 </Route>
                 <Route path='/userAdverts' exact>
                     <UserAdvertsPage/>
