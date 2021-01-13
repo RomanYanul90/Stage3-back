@@ -35,18 +35,28 @@ router.post(
 
 router.get('/', auth, async (req, res) => {
     try {
-        const adverts = await Advert.find({creator: req.user.userId})
+        const adverts = await Advert.find()
         res.json(adverts)
     } catch (e) {
         res.status(500).json({message: "Something went wrong."});
     }
 })
 //AUTH
-router.get('/:id', auth, async (req, res) => {
+router.get('/byId/:id', auth, async (req, res) => {
     try {
         const advert = await Advert.findById(req.params.id)
         res.json(advert)
     } catch (e) {
+        res.status(500).json({message: "Something went wrong."});
+    }
+})
+
+router.get('/userAdverts',auth, async (req, res) => {
+    try {
+        const adverts = await Advert.find({creator: req.user.userId})
+        res.json(adverts)
+    } catch (e) {
+        console.log(e)
         res.status(500).json({message: "Something went wrong."});
     }
 })

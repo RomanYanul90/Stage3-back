@@ -13,7 +13,7 @@ export const AdvertPage = () => {
 
     const getAdvert = useCallback(async () => {
         try {
-            const result = await request(`/api/advert/${advertId}`, "GET", null, {Authorization: `Bearer ${token}`})
+            const result = await request(`/api/advert/byId/${advertId}`, "GET", null, {Authorization: `Bearer ${token}`})
             setAdvert(result)
         } catch (e) {
         }

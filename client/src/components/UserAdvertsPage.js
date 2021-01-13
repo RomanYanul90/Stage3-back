@@ -12,7 +12,7 @@ export const UserAdvertsPage = () => {
 
     const fetchAdverts = useCallback(async () => {
         try {
-            const fetched = await request('/api/advert', 'GET', null,
+            const fetched = await request('/api/advert/userAdverts', 'GET', null,
                 {Authorization: `Bearer ${token}`}
             )
             setAdverts(fetched)
