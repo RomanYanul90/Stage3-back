@@ -6,6 +6,7 @@ import {AdvertsList} from "./AdvertsList";
 
 export const AllAdvertsPage = () => {
     const [adverts, setAdverts] = useState([])
+    const [searchParams, setSearchParams] = useState({title: ""})
     const {loading, request} = useHttp()
     const {token} = useContext(AuthContext)
 
@@ -17,19 +18,43 @@ export const AllAdvertsPage = () => {
             setAdverts(fetched)
         } catch (e) {
         }
-    }, [token,request])
+    }, [token, request])
 
-    useEffect(()=>{
+    useEffect(() => {
         fetchAdverts()
-    },[fetchAdverts])
+    }, [fetchAdverts])
 
     if (loading) {
         return <LoadingPage/>
     }
 
+    const changeInputHandler = (e) => {
+        setSearchParams({title: e.target.value})
+
+    }
+    const searchHandler = async (e)=>{
+        e.preventDefault()
+        try {
+            const fetched = await request(`/api/advert/byTitle/${searchParams.title}`, 'GET', null,
+                {Authorization: `Bearer ${token}`}
+            )
+            console.log(fetched)
+            setAdverts(fetched)
+        } catch (e) {
+        }
+    }
+
+    if (loading) {
+        return <LoadingPage/>
+    }
     return (
         <div>
-            {!loading&&<AdvertsList adverts={adverts}/>}
+            <form>
+                <label>Find advert</label>
+                <input type='text' name='title' onChange={changeInputHandler}/>
+                <button onClick={searchHandler}>Search</button>
+            </form>
+            {!loading && <AdvertsList adverts={adverts}/>}
         </div>
     )
 }

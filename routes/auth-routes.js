@@ -48,5 +48,15 @@ router.get('/user/:id', auth, async (req, res) => {
     }
 })
 
+router.get('/byUserName/:userName', auth, async (req, res) => {
+    try {
+        const adverts = await User.find({userName: req.params.userName})
+        res.json(adverts)
+    } catch (e) {
+        console.log(e)
+        res.status(500).json({message: "Something went wrong."});
+    }
+})
+
 
 module.exports = router
