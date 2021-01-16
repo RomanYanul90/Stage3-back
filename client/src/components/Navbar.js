@@ -1,13 +1,22 @@
-import React, {useContext} from "react";
+import React, {useContext,useState,useEffect,useCallback} from "react";
 import {NavLink} from 'react-router-dom';
 import {useHistory} from "react-router-dom";
 import {AuthContext} from "../context/AuthContext";
+import {useHttp} from "../hooks/httpHook";
+
 
 export const Navbar = () => {
+    const [user, setUser] = useState(null)
 
     const auth = useContext(AuthContext)
-    const userId = auth.userId
+    let userId = undefined
+    if(auth.userId){
+        userId = auth.userId
+    }
     // console.log(userId)
+
+    const {request} = useHttp()
+
     const selectId = (id) => {
         if (typeof (id) === "string") {
             return id
@@ -17,12 +26,27 @@ export const Navbar = () => {
             return selectId(newId)
         }
     }
+    const id = selectId(userId)
+    // console.log(id)
     const history = useHistory()
     const logoutHandler = (e) => {
         e.preventDefault()
         auth.logout()
         history.push('/')
     }
+
+    const getUserName = useCallback(async ()=>{
+        try{
+            const user = await request(`/api/auth/user/${id}`, "GET",null, {Authorization: `Bearer ${auth.token}`})
+            // console.log(user)
+            setUser(user.userName)
+        }catch (e){
+        }
+    },[request,id])
+
+    useEffect(() => {
+        if(id){getUserName()}
+    }, [getUserName])
 
     return (
         <nav>
@@ -34,7 +58,7 @@ export const Navbar = () => {
                 <li><NavLink to='/usersList'>All users</NavLink></li>
                 <li><a href='/' onClick={logoutHandler}>Log out</a></li>
             </ul>
-            {userId && <p>User ID: {selectId(userId)}</p>}
+            <p>User name: {user}</p>
         </nav>
     )
 }

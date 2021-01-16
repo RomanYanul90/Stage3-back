@@ -31,11 +31,22 @@ router.post(
 )
 
 router.get('/', auth, async (req, res) => {
-        try {
-                const users = await User.find()
-                res.json(users)
-        } catch (e) {
-                res.status(500).json({message: "Something went wrong."});
-        }
+    try {
+        const users = await User.find()
+        res.json(users)
+    } catch (e) {
+        res.status(500).json({message: "Something went wrong."});
+    }
 })
+
+router.get('/user/:id', auth, async (req, res) => {
+    try {
+        const user = await User.findById(req.params.id)
+        res.json(user)
+    } catch (e) {
+        res.status(500).json({message: "Something went wrong."});
+    }
+})
+
+
 module.exports = router

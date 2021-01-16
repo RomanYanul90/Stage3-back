@@ -1,7 +1,8 @@
 const {Schema, model, Types} = require('mongoose')
 
 const schema = new Schema({
-    creator:{type: Types.ObjectId,ref:'Advert'},
+    ownerId:{type: Types.ObjectId,ref:'Advert'},
+    ownerUserName:{type:String},
     title:{type: String, required: true},
     created:{type:Date,default: Date.now},
     modified:{type:Date},

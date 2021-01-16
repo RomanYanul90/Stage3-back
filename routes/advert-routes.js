@@ -19,16 +19,17 @@ router.post(
             const errors = validationResult(req)
 
             if (!errors.isEmpty()) {
-                return res.status(400).json({errors: errors.array(), message: "Invalid user register data."})
+                return res.status(400).json({errors: errors.array(), message: "Invalid values in create advert fields."})
             }
-            const {title, description, category, price, created} = req.body
-            // console.log(req.user.userId)
+            const {title, description, category, price, created, userName} = req.body
             const advert = new Advert({
-                title, description, category, price, created, creator: req.user.userId
+                title, description, category, price, created, ownerId: req.user.userId, ownerUserName:userName
             })
+            console.log(advert)
             await advert.save()
             res.status(201).json({advert})
         } catch (e) {
+            console.log(e)
             res.status(500).json({message: "Something went wrong."});
         }
     })
@@ -41,7 +42,6 @@ router.get('/', auth, async (req, res) => {
         res.status(500).json({message: "Something went wrong."});
     }
 })
-//AUTH
 router.get('/byId/:id', auth, async (req, res) => {
     try {
         const advert = await Advert.findById(req.params.id)
@@ -53,7 +53,17 @@ router.get('/byId/:id', auth, async (req, res) => {
 
 router.get('/userAdverts',auth, async (req, res) => {
     try {
-        const adverts = await Advert.find({creator: req.user.userId})
+        const adverts = await Advert.find({ownerId: req.user.userId})
+        res.json(adverts)
+    } catch (e) {
+        console.log(e)
+        res.status(500).json({message: "Something went wrong."});
+    }
+})
+
+router.get('/byOwnerName/:owner',auth, async (req, res) => {
+    try {
+        const adverts = await Advert.find({ownerUserName:req.params.owner})
         res.json(adverts)
     } catch (e) {
         console.log(e)

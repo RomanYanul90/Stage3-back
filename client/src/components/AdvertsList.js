@@ -9,7 +9,7 @@ export const AdvertsList = ({adverts}) => {
         <div>
             {adverts.map((el, index) => {
                 return <div key={el._id}>
-                    <h2>{index + 1})</h2>
+                    <h2>Advert {index + 1})</h2>
                     <AdvertCard  advert={el}/>
                 </div>
 

@@ -7,6 +7,7 @@ import {Dashboard} from "./components/Dashboard";
 import {UsersList} from "./components/UsersList";
 import {AdvertPage} from "./components/AdvertPage";
 import {AllUsersPage} from "./components/AllUsersPage";
+import {UserPage} from "./components/UserPage"
 
 export const useRoutes = isAuth => {
     if(isAuth){
@@ -26,6 +27,9 @@ export const useRoutes = isAuth => {
                 </Route>
                 <Route path='/createAdvert' exact>
                     <CreateAdvertPage/>
+                </Route>
+                <Route path='/userPage' exact>
+                    <UserPage/>
                 </Route>
                 <Redirect to='/createAdvert' />
             </Switch>
