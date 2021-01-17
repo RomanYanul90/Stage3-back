@@ -4,11 +4,14 @@ import {useHttp} from "../hooks/httpHook";
 import {AuthContext} from "../context/AuthContext";
 import {LoadingPage} from "./LoadingPage";
 import {AdvertCard} from "./AdvertCard";
+import { useHistory } from "react-router-dom";
+
 
 export const RemoveAdvertPage = () => {
     const {token} = useContext(AuthContext)
     const {request, loading} = useHttp()
     // const [advert, setAdvert] = useState(null)
+    const history = useHistory()
     const advertId = useParams().id
 
     const removeAdvert = useCallback(async () => {
@@ -17,6 +20,7 @@ export const RemoveAdvertPage = () => {
             // setAdvert(result)
         } catch (e) {
         }
+        history.push('/userAdverts')
     }, [token, advertId, request])
 
     return(

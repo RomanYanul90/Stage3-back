@@ -28,7 +28,7 @@ router.post(
             const advert = new Advert({
                 title, description, category, price, created, ownerId: req.user.userId, ownerUserName: userName
             })
-            console.log(advert)
+            // console.log(advert)
             await advert.save()
             res.status(201).json({advert})
         } catch (e) {

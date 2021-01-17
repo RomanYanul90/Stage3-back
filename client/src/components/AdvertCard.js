@@ -40,7 +40,5 @@ export const AdvertCard = ({advert}) => {
             </div>
             }
         </div>
-
-
     )
 }

@@ -1,9 +1,9 @@
 import React, {useState, useEffect, useContext, useCallback} from 'react'
 import {useHttp} from "../hooks/httpHook";
 import {useMessage} from "../hooks/errorHook";
-import {useHistory} from "react-router-dom";
+// import {useHistory} from "react-router-dom";
 import {AuthContext} from "../context/AuthContext";
-import {useParams} from "react-router-dom";
+import {useParams, useHistory} from "react-router-dom";
 import {LoadingPage} from "./LoadingPage";
 import {AdvertCard} from "./AdvertCard";
 
@@ -42,10 +42,16 @@ export const EditAdvertPage = () => {
         e.preventDefault()
 
         try {
-            const data = await request(`/api/advert/editAdvert/${advertId}`, "PATCH", {...form,modified:Date.now()}, {Authorization: `Bearer ${auth.token}`})
-            history.push(`/advert/${data.advert._id}`)
+            const data = await request(`/api/advert/editAdvert/${advertId}`, "PATCH", {
+                title: form.title ? form.title : advert.title,
+                category: form.category ? form.category : advert.category,
+                description: form.description ? form.description : advert.description,
+                price: form.price ? form.price : advert.price,
+                modified: Date.now()
+            }, {Authorization: `Bearer ${auth.token}`})
         } catch (e) {
         }
+        history.push(`/advert/${advert._id}`)
     }
 
     if (loading) {
@@ -58,19 +64,20 @@ export const EditAdvertPage = () => {
                 <form>
                     <div>
                         <label>Title</label>
-                        <input type="text" name="title" onChange={changeHandler}/>
+                        <input type="text" name="title" defaultValue={advert.title} onChange={changeHandler}/>
                     </div>
                     <div>
                         <label>Category</label>
-                        <input type="text" name="category" onChange={changeHandler}/>
+                        <input type="text" name="category" defaultValue={advert.category} onChange={changeHandler}/>
                     </div>
                     <div>
                         <label>Description</label>
-                        <textarea type="text" name="description" onChange={changeHandler}/>
+                        <textarea type="text" name="description" defaultValue={advert.description}
+                                  onChange={changeHandler}/>
                     </div>
                     <div>
                         <label>Price</label>
-                        <input type="text" name="price"  onChange={changeHandler}/>
+                        <input type="text" name="price" defaultValue={advert.price} onChange={changeHandler}/>
                     </div>
                     <button onClick={editAdvertHandler}>Save changed advert</button>
                 </form>
