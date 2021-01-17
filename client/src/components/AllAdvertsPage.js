@@ -54,7 +54,8 @@ export const AllAdvertsPage = () => {
                 <input type='text' name='title' onChange={changeInputHandler}/>
                 <button onClick={searchHandler}>Search</button>
             </form>
-            {!loading && <AdvertsList adverts={adverts}/>}
+            {!adverts.length || loading?<p>No adverts</p>:<AdvertsList adverts={adverts}/>}
+            {/*{!loading && <AdvertsList adverts={adverts}/>}*/}
         </div>
     )
 }

@@ -83,5 +83,27 @@ router.get('/byTitle/:title', auth, async (req, res) => {
         res.status(500).json({message: "Something went wrong."});
     }
 })
+router.patch('/editAdvert/:id', auth, async (req, res) => {
+    try {
+        const id = req.params.id
+        const updates = req.body
+        const advert = await Advert.findByIdAndUpdate(id,updates)
+        res.json(advert)
+    } catch (e) {
+        console.log(e)
+        res.status(500).json({message: "Something went wrong."});
+    }
+})
+
+router.delete('/deleteAdvert/:id', auth, async (req, res) => {
+    try {
+        const id = req.params.id
+        const advert = await Advert.findByIdAndDelete(id)
+        res.json(advert)
+    } catch (e) {
+        console.log(e)
+        res.status(500).json({message: "Something went wrong."});
+    }
+})
 
 module.exports = router

@@ -1,0 +1,81 @@
+import React, {useState, useEffect, useContext, useCallback} from 'react'
+import {useHttp} from "../hooks/httpHook";
+import {useMessage} from "../hooks/errorHook";
+import {useHistory} from "react-router-dom";
+import {AuthContext} from "../context/AuthContext";
+import {useParams} from "react-router-dom";
+import {LoadingPage} from "./LoadingPage";
+import {AdvertCard} from "./AdvertCard";
+
+export const EditAdvertPage = () => {
+    const {token} = useContext(AuthContext)
+    const {request, loading} = useHttp()
+    const [advert, setAdvert] = useState(null)
+    const advertId = useParams().id
+    const history = useHistory()
+    const auth = useContext(AuthContext)
+
+    const [form, setForm] = useState({
+        title: "",
+        description: "",
+        category: "",
+        price: "",
+    })
+
+    const getAdvert = useCallback(async () => {
+        try {
+            const result = await request(`/api/advert/byId/${advertId}`, "GET", null, {Authorization: `Bearer ${token}`})
+            setAdvert(result)
+        } catch (e) {
+        }
+    }, [token, advertId, request])
+
+    useEffect(() => {
+        getAdvert()
+    }, [getAdvert])
+
+    const changeHandler = (e) => {
+        setForm({...form, [e.target.name]: e.target.value})
+    }
+
+    const editAdvertHandler = async (e) => {
+        e.preventDefault()
+
+        try {
+            const data = await request(`/api/advert/editAdvert/${advertId}`, "PATCH", {...form,modified:Date.now()}, {Authorization: `Bearer ${auth.token}`})
+            history.push(`/advert/${data.advert._id}`)
+        } catch (e) {
+        }
+    }
+
+    if (loading) {
+        return <LoadingPage/>
+    }
+    return (
+        <div>
+            {advert && <div>
+                <h2>Edit advert</h2>
+                <form>
+                    <div>
+                        <label>Title</label>
+                        <input type="text" name="title" onChange={changeHandler}/>
+                    </div>
+                    <div>
+                        <label>Category</label>
+                        <input type="text" name="category" onChange={changeHandler}/>
+                    </div>
+                    <div>
+                        <label>Description</label>
+                        <textarea type="text" name="description" onChange={changeHandler}/>
+                    </div>
+                    <div>
+                        <label>Price</label>
+                        <input type="text" name="price"  onChange={changeHandler}/>
+                    </div>
+                    <button onClick={editAdvertHandler}>Save changed advert</button>
+                </form>
+            </div>}
+
+        </div>
+    )
+}

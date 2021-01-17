@@ -13,7 +13,7 @@ export const UserCard = ({user}) => {
                 <p>User name: {user.userName}</p>
                 <p>Email: {user.email}</p>
             </div>
-            {showAdverts == true ? <ChoosenUserAdverts ownerName={user.userName}/> : <p>false</p>}
+            {showAdverts && <ChoosenUserAdverts ownerName={user.userName}/> }
         </div>
     )
 }

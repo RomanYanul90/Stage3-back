@@ -39,7 +39,7 @@ export const AllUsersPage = () => {
             const fetched = await request(`/api/auth/byUserName/${searchParams.userName}`, 'GET', null,
                 {Authorization: `Bearer ${token}`}
             )
-            console.log(fetched)
+            // console.log(fetched)
             setUsers(fetched)
         } catch (e) {
         }

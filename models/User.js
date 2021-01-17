@@ -7,7 +7,6 @@ const schema = new Schema({
     email: {type: String, required: true, unique: true},
     phone: {type: String, default:"+375291234567"},// TODO delete default
     password: {type: String, required: true},
-    adverts: [{type: Types.ObjectId,ref:'Advert'}]
 })
 
 module.exports = model("User", schema)

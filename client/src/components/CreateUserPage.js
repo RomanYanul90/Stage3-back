@@ -4,7 +4,6 @@ import {useMessage} from "../hooks/errorHook";
 import {AuthContext} from "../context/AuthContext";
 
 export const CreateUserPage = () => {
-    // const auth = useContext(AuthContext)
     const {loading, error, request, clearError} = useHttp()
 
     const [form, setForm] = useState({
@@ -32,7 +31,6 @@ export const CreateUserPage = () => {
         try {
             const data = await request('/api/auth/register', "POST", {...form})
             message(data.message)
-            // console.log("Data", data)
         } catch (e) {
         }
     }

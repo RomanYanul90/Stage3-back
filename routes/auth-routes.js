@@ -58,5 +58,28 @@ router.get('/byUserName/:userName', auth, async (req, res) => {
     }
 })
 
+router.patch('/editUser/:id', auth, async (req, res) => {
+    try {
+        const id = req.params.id
+        const updates = req.body
+        const advert = await User.findByIdAndUpdate(id,updates)
+        res.json(advert)
+    } catch (e) {
+        console.log(e)
+        res.status(500).json({message: "Something went wrong."});
+    }
+})
+
+router.delete('/deleteUser/:id', auth, async (req, res) => {
+    try {
+        const id = req.params.id
+        const advert = await User.findByIdAndDelete(id)
+        res.json(advert)
+    } catch (e) {
+        console.log(e)
+        res.status(500).json({message: "Something went wrong."});
+    }
+})
+
 
 module.exports = router
