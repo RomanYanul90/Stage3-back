@@ -30,6 +30,7 @@ export const UserAdvertsPage = () => {
 
     return (
         <div>
+            <h2>My adverts</h2>
             {!loading&&<AdvertsList adverts={adverts}/>}
         </div>
     )
