@@ -1,5 +1,4 @@
 import React, {useState} from "react";
-import {Link, Redirect, Route, Switch} from "react-router-dom";
 import {ChoosenUserAdverts} from './ChoosenUserAdverts'
 
 export const UserCard = ({user}) => {

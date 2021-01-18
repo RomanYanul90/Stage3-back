@@ -1,15 +1,13 @@
-import React, {useState, useCallback, useContext, useEffect} from 'react'
+import React, {useCallback, useContext,} from 'react'
 import {useParams} from "react-router-dom";
 import {useHttp} from "../hooks/httpHook";
 import {AuthContext} from "../context/AuthContext";
-import {LoadingPage} from "./LoadingPage";
-import {AdvertCard} from "./AdvertCard";
+// import {LoadingPage} from "./LoadingPage";
 import { useHistory } from "react-router-dom";
-
 
 export const RemoveAdvertPage = () => {
     const {token} = useContext(AuthContext)
-    const {request, loading} = useHttp()
+    const {request} = useHttp()
     // const [advert, setAdvert] = useState(null)
     const history = useHistory()
     const advertId = useParams().id
@@ -17,11 +15,11 @@ export const RemoveAdvertPage = () => {
     const removeAdvert = useCallback(async () => {
         try {
             const result = await request(`/api/advert/deleteAdvert/${advertId}`, "DELETE", null, {Authorization: `Bearer ${token}`})
-            // setAdvert(result)
+            history.push('/userAdverts')
         } catch (e) {
         }
         history.push('/userAdverts')
-    }, [token, advertId, request])
+    }, [token, advertId, request,history])
 
     return(
         <div>

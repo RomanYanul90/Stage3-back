@@ -1,10 +1,10 @@
-import React, {useState,useEffect,useContext} from 'react'
+import React, {useState,useEffect} from 'react'
 import {useHttp} from "../hooks/httpHook";
 import {useMessage} from "../hooks/errorHook";
-import {AuthContext} from "../context/AuthContext";
+// import {AuthContext} from "../context/AuthContext";
 
 export const CreateUserPage = () => {
-    const {loading, error, request, clearError} = useHttp()
+    const { error, request, clearError} = useHttp()
 
     const [form, setForm] = useState({
         firstName: "",

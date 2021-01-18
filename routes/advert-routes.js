@@ -1,8 +1,16 @@
-const {Router} = require('express');
-const {check, validationResult} = require('express-validator');
-const Advert = require('../models/Advert');
-const auth = require('../middleware/auth-middleware');
-import {CreateAdvert} from '../controllers/AdvertControllers'
+import {Router} from 'express';
+import {check, validationResult} from 'express-validator';
+import auth from '../middleware/auth-middleware';
+import {
+    CreateAdvert,
+    GetAllAdverts,
+    GetAdvertById,
+    GetCurrentUserAdverts,
+    GetAdvertsByOwnerName,
+    FindAdvertBytitle,
+    EditAdvert,
+    DeleteAdvert
+} from '../controllers/AdvertControllers'
 
 const router = Router();
 
@@ -16,75 +24,20 @@ router.post(
         check('price', "Invalid last name length.").isNumeric(),
     ],
     CreateAdvert
-    )
+);
 
-router.get('/', auth, async (req, res) => {
-    try {
-        const adverts = await Advert.find()
-        res.json(adverts)
-    } catch (e) {
-        res.status(500).json({message: "Something went wrong."});
-    }
-})
-router.get('/byId/:id', auth, async (req, res) => {
-    try {
-        const advert = await Advert.findById(req.params.id)
-        res.json(advert)
-    } catch (e) {
-        res.status(500).json({message: "Something went wrong."});
-    }
-})
+router.get('/', auth, GetAllAdverts);
 
-router.get('/userAdverts', auth, async (req, res) => {
-    try {
-        const adverts = await Advert.find({ownerId: req.user.userId})
-        res.json(adverts)
-    } catch (e) {
-        console.log(e)
-        res.status(500).json({message: "Something went wrong."});
-    }
-})
+router.get('/byId/:id', auth, GetAdvertById);
 
-router.get('/byOwnerName/:owner', auth, async (req, res) => {
-    try {
-        const adverts = await Advert.find({ownerUserName: req.params.owner})
-        res.json(adverts)
-    } catch (e) {
-        console.log(e)
-        res.status(500).json({message: "Something went wrong."});
-    }
-})
+router.get('/userAdverts', auth, GetCurrentUserAdverts);
 
-router.get('/byTitle/:title', auth, async (req, res) => {
-    try {
-        const adverts = await Advert.find({title: req.params.title})
-        res.json(adverts)
-    } catch (e) {
-        console.log(e)
-        res.status(500).json({message: "Something went wrong."});
-    }
-})
-router.patch('/editAdvert/:id', auth, async (req, res) => {
-    try {
-        const id = req.params.id
-        const updates = req.body
-        const advert = await Advert.findByIdAndUpdate(id,updates)
-        res.json(advert)
-    } catch (e) {
-        console.log(e)
-        res.status(500).json({message: "Something went wrong."});
-    }
-})
+router.get('/byOwnerName/:owner', auth, GetAdvertsByOwnerName);
 
-router.delete('/deleteAdvert/:id', auth, async (req, res) => {
-    try {
-        const id = req.params.id
-        const advert = await Advert.findByIdAndDelete(id)
-        res.json(advert)
-    } catch (e) {
-        console.log(e)
-        res.status(500).json({message: "Something went wrong."});
-    }
-})
+router.get('/byTitle/:title', auth, FindAdvertBytitle);
+
+router.patch('/editAdvert/:id', auth, EditAdvert);
+
+router.delete('/deleteAdvert/:id', auth, DeleteAdvert);
 
 module.exports = router

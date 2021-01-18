@@ -4,7 +4,7 @@ import {UserAdvertsPage} from "./components/UserAdvertsPage";
 import {CreateAdvertPage} from "./components/CreateAdvertPage";
 import {AllAdvertsPage} from "./components/AllAdvertsPage";
 import {Dashboard} from "./components/Dashboard";
-import {UsersList} from "./components/UsersList";
+// import {UsersList} from "./components/UsersList";
 import {AdvertPage} from "./components/AdvertPage";
 import {AllUsersPage} from "./components/AllUsersPage";
 import {UserPage} from "./components/UserPage"

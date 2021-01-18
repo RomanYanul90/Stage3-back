@@ -8,10 +8,10 @@ export const AdvertsList = ({adverts}) => {
     }
     const sortAdverts=(adverts,sortParam)=>{
         return adverts.sort((a,b)=>{
-            if(sortParam=='price'){
+            if(sortParam==='price'){
                 return  a.price - b.price
             }
-            if(sortParam=='created'){
+            if(sortParam==='created'){
                 return  Date.parse(a.created) - Date.parse(b.created)
             }
         })

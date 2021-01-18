@@ -11,7 +11,7 @@ export const CreateUserService = async function (firstName, lastName, userName, 
         await user.save()
 
     } else {
-        throw new Error
+        throw new Error;
     }
 }
 
@@ -21,7 +21,26 @@ export const LoginUserService = async function (email) {
 }
 
 export const GetAllUsersService = async () => {
-    const users = await User.find()
-    return users
+    const users = await User.find();
+    return users;
 }
 
+export const GetUserByIdService = async (id) => {
+    const user = await User.findById(id);
+    return user;
+}
+
+export const GetUserByUserNameService = async (userName) => {
+    const user = await User.find({userName: userName});
+    return user;
+}
+
+export const EditUserService = async (id,updates) => {
+    const user = await User.findByIdAndUpdate(id, updates);
+    return user;
+}
+
+export const DeleteUserService = async (id) => {
+    const user = await User.findByIdAndDelete(id);
+    return user;
+}

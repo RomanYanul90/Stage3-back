@@ -10,14 +10,14 @@ export const UserPage = () => {
     const {request, loading} = useHttp()
     const [user, setUser] = useState(null)
     const userId = useParams().id
-    const [form, setForm] = useState({
-        firstName: "",
-        lastName: "",
-        userName: "",
-        email: "",
-        phone: "",
-        password: "",
-    })
+    // const [form, setForm] = useState({
+    //     firstName: "",
+    //     lastName: "",
+    //     userName: "",
+    //     email: "",
+    //     phone: "",
+    //     password: "",
+    // })
 
     const getUser = useCallback(async () => {
         try {

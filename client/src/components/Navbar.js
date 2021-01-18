@@ -42,11 +42,11 @@ export const Navbar = () => {
             setUser(user.userName)
         }catch (e){
         }
-    },[request,id])
+    },[auth.token,request,id])
 
     useEffect(() => {
         if(id){getUserName()}
-    }, [getUserName])
+    }, [getUserName,id])
 
     return (
         <nav>

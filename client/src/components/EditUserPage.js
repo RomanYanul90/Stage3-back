@@ -1,10 +1,10 @@
 import React, {useState, useEffect, useContext, useCallback} from 'react'
 import {useHttp} from "../hooks/httpHook";
-import {useMessage} from "../hooks/errorHook";
+// import {useMessage} from "../hooks/errorHook";
 import {AuthContext} from "../context/AuthContext";
 import {useParams, useHistory} from "react-router-dom";
 import {LoadingPage} from "./LoadingPage";
-import {AdvertCard} from "./AdvertCard";
+// import {AdvertCard} from "./AdvertCard";
 
 export const EditUserPage = () => {
     const {token} = useContext(AuthContext)

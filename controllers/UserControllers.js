@@ -2,7 +2,15 @@ import {validationResult} from "express-validator";
 import jwt from 'jsonwebtoken';
 import bcrypt from 'bcryptjs';
 import config from '../config/default.json';
-import {CreateUserService, LoginUserService, GetAllUsersService} from '../services/UserServices'
+import {
+    CreateUserService,
+    LoginUserService,
+    GetAllUsersService,
+    GetUserByIdService,
+    GetUserByUserNameService,
+    EditUserService,
+    DeleteUserService
+} from '../services/UserServices'
 
 export const CreateUser = async function (req, res) {
     try {
@@ -64,9 +72,54 @@ export const LoginUser = async function (req, res) {
 
 export const GetAllUsers = async (req, res) => {
     try {
-        const users = await GetAllUsersService()
-        res.json(users)
+        const users = await GetAllUsersService();
+        res.json(users);
     } catch (e) {
+        res.status(500).json({message: "Something went wrong."});
+    }
+}
+
+
+export const GetUserById = async (req, res) => {
+    const id = req.params.id;
+    try {
+        const user = await GetUserByIdService(id);
+        res.json(user)
+    } catch (e) {
+        res.status(500).json({message: "Something went wrong."});
+    }
+}
+
+export const GetUserByUserName = async (req, res) => {
+    const userName = req.params.userName;
+    try {
+        const user = await GetUserByUserNameService(userName);
+        res.json(user);
+    } catch (e) {
+        console.log(e)
+        res.status(500).json({message: "Something went wrong."});
+    }
+}
+
+export const EditUser = async (req, res) => {
+    try {
+        const id = req.params.id;
+        const updates = req.body;
+        const user = await EditUserService(id, updates);
+        res.json(user);
+    } catch (e) {
+        console.log(e)
+        res.status(500).json({message: "Something went wrong."});
+    }
+}
+
+export const DeleteUser = async (req, res) => {
+    try {
+        const id = req.params.id;
+        const user = await DeleteUserService(id);
+        res.json(user)
+    } catch (e) {
+        console.log(e)
         res.status(500).json({message: "Something went wrong."});
     }
 }
