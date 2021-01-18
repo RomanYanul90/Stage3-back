@@ -1,8 +1,9 @@
 import React,{useState} from "react";
 import {AdvertCard} from "./AdvertCard";
+import {Link} from "react-router-dom";
 
 export const AdvertsList = ({adverts}) => {
-    const [sortParam,setSortParam] = useState('')
+    const [sortParam,setSortParam] = useState('price')
     if(!adverts.length){
         return <p>There is no adverts created by current user</p>
     }
@@ -31,10 +32,11 @@ export const AdvertsList = ({adverts}) => {
 
             {sortAdverts(adverts,sortParam).map((el, index) => {
                 return <div key={el._id}>
-                    <h2>Advert {index + 1})</h2>
+                    <Link to={`/advert/${el._id}`}>
+                    {/*<h2>Advert {index + 1})</h2>*/}
                     <AdvertCard  advert={el}/>
+                    </Link>
                 </div>
-
             })}
         </div>
     )

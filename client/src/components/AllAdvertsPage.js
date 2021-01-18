@@ -32,16 +32,31 @@ export const AllAdvertsPage = () => {
         setSearchParams({title: e.target.value})
 
     }
-    const searchHandler = async (e)=>{
+    const searchHandler = async (e) => {
         e.preventDefault()
+        // let searched = []
+        // let copyt = []
         try {
             const fetched = await request(`/api/advert/byTitle/${searchParams.title}`, 'GET', null,
                 {Authorization: `Bearer ${token}`}
             )
-            console.log(fetched[0].views)
+            // searched = fetched
             setAdverts(fetched)
         } catch (e) {
         }
+        // searched.forEach((el) => {
+        //      copyt.push({id: el._id, views: el.views})
+        //     // console.log(el._id)
+        //     // console.log(el.views)
+        // })
+        // console.log(copyt)
+
+            // copyt.forEach((el)=>{
+            //     await request(`/api/advert/editAdvert/${el.id}`, "PATCH", {
+            //         views: el.views+1
+            //     }, {Authorization: `Bearer ${auth.token}`})
+            // })
+
     }
 
     if (loading) {
@@ -53,9 +68,9 @@ export const AllAdvertsPage = () => {
                 <label>Find advert</label>
                 <input type='text' name='title' onChange={changeInputHandler}/>
                 <button onClick={searchHandler}>Search</button>
-                
+
             </form>
-            {!adverts.length || loading?<p>No adverts</p>:<AdvertsList adverts={adverts}/>}
+            {!adverts.length || loading ? <p>No adverts</p> : <AdvertsList adverts={adverts}/>}
             {/*{!loading && <AdvertsList adverts={adverts}/>}*/}
         </div>
     )
