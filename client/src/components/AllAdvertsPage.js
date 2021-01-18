@@ -38,7 +38,7 @@ export const AllAdvertsPage = () => {
             const fetched = await request(`/api/advert/byTitle/${searchParams.title}`, 'GET', null,
                 {Authorization: `Bearer ${token}`}
             )
-            console.log(fetched)
+            console.log(fetched[0].views)
             setAdverts(fetched)
         } catch (e) {
         }

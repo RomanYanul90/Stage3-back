@@ -7,10 +7,14 @@ export const UserCard = ({user}) => {
         setShowAdvert(!showAdverts)
     }
     return (
-        <div onClick={showHandler}>
+        <div >
             <div style={{border: "solid"}}>
-                <p>User name: {user.userName}</p>
-                <p>Email: {user.email}</p>
+                <div >
+                    <p>User name: {user.userName}</p>
+                    <p>Email: {user.email}</p>
+                </div>
+                <button onClick={showHandler}>Show adverts creates by this user</button>
+
             </div>
             {showAdverts && <ChoosenUserAdverts ownerName={user.userName}/> }
         </div>
