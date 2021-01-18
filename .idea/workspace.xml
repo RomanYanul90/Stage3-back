@@ -1,13 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1b57e755-6e85-4ce4-80b4-936e54f1958e" name="Default Changelist" comment="New method for users adverts render">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="1b57e755-6e85-4ce4-80b4-936e54f1958e" name="Default Changelist" comment="Minor Changes">
       <change beforePath="$PROJECT_DIR$/client/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/client/.eslintcache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/components/AdvertCard.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/AdvertCard.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/components/AdvertPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/AdvertPage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/AdvertsList.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/AdvertsList.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/AllAdvertsPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/AllAdvertsPage.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,7 +72,7 @@
       <workItem from="1610884729186" duration="27745000" />
       <workItem from="1610923736241" duration="5575000" />
       <workItem from="1610929365040" duration="423000" />
-      <workItem from="1610967300656" duration="22417000" />
+      <workItem from="1610967300656" duration="22779000" />
     </task>
     <task id="LOCAL-00001" summary="Create user and register">
       <created>1609707672303</created>
@@ -210,7 +207,14 @@
       <option name="project" value="LOCAL" />
       <updated>1610982360540</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="Minor Changes">
+      <created>1610994113261</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1610994113261</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -248,6 +252,7 @@
     <MESSAGE value="Gather controllers and services" />
     <MESSAGE value="Server structure ready" />
     <MESSAGE value="New method for users adverts render" />
-    <option name="LAST_COMMIT_MESSAGE" value="New method for users adverts render" />
+    <MESSAGE value="Minor Changes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Minor Changes" />
   </component>
 </project>

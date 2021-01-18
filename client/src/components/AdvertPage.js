@@ -38,7 +38,7 @@ export const AdvertPage = () => {
             setAdvert(result)
         } catch (e) {
         }
-    }, [auth.token, advertId, request])
+    }, [auth.token, advertId, request,id])
 
     useEffect(() => {
         getAdvert()

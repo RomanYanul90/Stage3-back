@@ -1,13 +1,7 @@
-import React, {useContext} from "react";
-import {Link, Redirect} from "react-router-dom";
-import {AuthContext} from "../context/AuthContext";
-import {useHistory} from "react-router-dom";
-
+import React from "react";
 
 export const AdvertCard = ({advert}) => {
-
     return (
-
         <div style={{border: "solid"}}>
             <h2>{advert.title}</h2>
             <p>Category: {advert.category}</p>
