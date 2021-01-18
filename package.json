@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
-    "server": "nodemon index.js",
+    "server": "nodemon --exec babel-node index.js",
     "client": "npm run start --prefix client",
     "dev": " concurrently \"npm run server\" \"npm run client\""
   },
@@ -20,6 +20,9 @@
     "mongoose": "^5.11.9"
   },
   "devDependencies": {
+    "@babel/core": "^7.12.10",
+    "@babel/node": "^7.12.10",
+    "@babel/preset-env": "^7.12.11",
     "concurrently": "^5.3.0",
     "nodemon": "^2.0.6"
   }

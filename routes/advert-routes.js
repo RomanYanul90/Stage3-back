@@ -2,7 +2,7 @@ const {Router} = require('express');
 const {check, validationResult} = require('express-validator');
 const Advert = require('../models/Advert');
 const auth = require('../middleware/auth-middleware');
-
+import {CreateAdvert} from '../controllers/CreateAdvertController'
 const router = Router();
 
 router.post(
@@ -14,28 +14,8 @@ router.post(
         check('category', "Invalid last name length.").isAlpha(),
         check('price', "Invalid last name length.").isNumeric(),
     ],
-    async (req, res) => {
-        try {
-            const errors = validationResult(req)
-
-            if (!errors.isEmpty()) {
-                return res.status(400).json({
-                    errors: errors.array(),
-                    message: "Invalid values in create advert fields."
-                })
-            }
-            const {title, description, category, price, created, userName} = req.body
-            const advert = new Advert({
-                title, description, category, price, created, ownerId: req.user.userId, ownerUserName: userName
-            })
-            // console.log(advert)
-            await advert.save()
-            res.status(201).json({advert})
-        } catch (e) {
-            console.log(e)
-            res.status(500).json({message: "Something went wrong."});
-        }
-    })
+    CreateAdvert
+    )
 
 router.get('/', auth, async (req, res) => {
     try {

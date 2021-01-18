@@ -1,9 +1,10 @@
-const {Router} = require('express');
-const {check} = require('express-validator');
-const User = require('../models/User');
-const CreateUserController = require('../controllers/CreateUserController');
-const LoginUserController = require('../controllers/LoginUserController')
-const auth = require('../middleware/auth-middleware');
+import {Router} from 'express';
+import {check} from 'express-validator';
+import User from '../models/User';
+import auth from '../middleware/auth-middleware';
+import {CreateUser} from "../controllers/CreateUserController";
+import {LoginUser} from '../controllers/LoginUserController';
+import {GetAllUsers} from '../controllers/GetAllUsersController';
 
 const router = Router();
 
@@ -19,7 +20,7 @@ router.post(
         // check('phone', "Invalid phone input").isMobilePhone("any"),
         check('password', "Invalid password length").isLength({min: 8})
     ],
-    CreateUserController.CreateUser)
+  CreateUser)
 
 router.post(
     '/login',
@@ -27,17 +28,10 @@ router.post(
         check('email', "Invalid email").normalizeEmail().isEmail(),
         check('password', "Invalid password").exists()
     ],
-    LoginUserController.LoginUser
+    LoginUser
 )
 
-router.get('/', auth, async (req, res) => {
-    try {
-        const users = await User.find()
-        res.json(users)
-    } catch (e) {
-        res.status(500).json({message: "Something went wrong."});
-    }
-})
+router.get('/', auth,GetAllUsers)
 
 router.get('/user/:id', auth, async (req, res) => {
     try {
@@ -80,6 +74,5 @@ router.delete('/deleteUser/:id', auth, async (req, res) => {
         res.status(500).json({message: "Something went wrong."});
     }
 })
-
 
 module.exports = router

@@ -1,7 +1,7 @@
-const User = require('../models/User');
-const bcrypt = require('bcryptjs');
+import User from '../models/User';
+import bcrypt from 'bcryptjs';
 
-exports.CreateUser = async function (firstName, lastName, userName, email, phone, password) {
+export const CreateUserService = async function (firstName, lastName, userName, email, phone, password) {
     const isUserNameExist = await User.findOne({userName});
     const isUserEmailExist = await User.findOne({email});
 

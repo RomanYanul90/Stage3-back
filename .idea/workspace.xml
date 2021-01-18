@@ -1,11 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1b57e755-6e85-4ce4-80b4-936e54f1958e" name="Default Changelist" comment="Edit and delete User">
+    <list default="true" id="1b57e755-6e85-4ce4-80b4-936e54f1958e" name="Default Changelist" comment="sort adverts by date and price">
+      <change afterPath="$PROJECT_DIR$/.babelrc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/controllers/AdvertControllers.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/controllers/CreateAdvertController.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/controllers/GetAllUsersController.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/controllers/UserControllers.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/AdvertServices.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/CreateAdvertServices.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/GetAllUsersServices.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/UserServices.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/client/.eslintcache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/AdvertsList.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/AdvertsList.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/AllAdvertsPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/AllAdvertsPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/debug.log" beforeDir="false" afterPath="$PROJECT_DIR$/client/debug.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/AdvertCard.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/AdvertCard.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/CreateUserController.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/CreateUserController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/LoginUserController.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/LoginUserController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/advert-routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/advert-routes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/auth-routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/auth-routes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/CreateUserServices.js" beforeDir="false" afterPath="$PROJECT_DIR$/services/CreateUserServices.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/LoginUserServices.js" beforeDir="false" afterPath="$PROJECT_DIR$/services/LoginUserServices.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,7 +53,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/expensify-app" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../MernTest" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
@@ -70,7 +88,10 @@
       <workItem from="1610577879830" duration="227000" />
       <workItem from="1610807696169" duration="17701000" />
       <workItem from="1610833785924" duration="364000" />
-      <workItem from="1610884729186" duration="27354000" />
+      <workItem from="1610884729186" duration="27745000" />
+      <workItem from="1610923736241" duration="5575000" />
+      <workItem from="1610929365040" duration="423000" />
+      <workItem from="1610967300656" duration="4943000" />
     </task>
     <task id="LOCAL-00001" summary="Create user and register">
       <created>1609707672303</created>
@@ -170,7 +191,14 @@
       <option name="project" value="LOCAL" />
       <updated>1610913488157</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="sort adverts by date and price">
+      <created>1610915430245</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1610915430245</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -203,6 +231,7 @@
     <MESSAGE value="Search users by username and search adverts by title" />
     <MESSAGE value="Edit and delete adverts" />
     <MESSAGE value="Edit and delete User" />
-    <option name="LAST_COMMIT_MESSAGE" value="Edit and delete User" />
+    <MESSAGE value="sort adverts by date and price" />
+    <option name="LAST_COMMIT_MESSAGE" value="sort adverts by date and price" />
   </component>
 </project>

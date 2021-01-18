@@ -1,6 +1,6 @@
-const express = require('express');
-const config = require('./config/default.json');
-const mongoose = require('mongoose');
+import express from 'express';
+import config from './config/default.json';
+import mongoose from 'mongoose';
 
 const app = express();
 

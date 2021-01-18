@@ -1,6 +1,6 @@
-const User = require('../models/User');
+import User from '../models/User';
 
-exports.LoginUser = async function(email){
+export const LoginUserService = async function(email){
     const user = await User.findOne({email});
     return user;
 }

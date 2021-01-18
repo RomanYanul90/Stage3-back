@@ -29,7 +29,7 @@ export const AdvertCard = ({advert}) => {
             <p>Created by: {advert.ownerUserName}</p>
             <p>Created: {new Date(advert.created).toLocaleString()}</p>
             {advert.modified && <p>Modified:{advert.modified}</p>}
-            {id == advert.ownerId &&
+            {id === advert.ownerId &&
             <div>
                 <Link to={`/editAdvert/${advert._id}`}>
                     <button>Edit</button>
