@@ -2,7 +2,8 @@ const {Router} = require('express');
 const {check, validationResult} = require('express-validator');
 const Advert = require('../models/Advert');
 const auth = require('../middleware/auth-middleware');
-import {CreateAdvert} from '../controllers/CreateAdvertController'
+import {CreateAdvert} from '../controllers/AdvertControllers'
+
 const router = Router();
 
 router.post(

@@ -2,9 +2,7 @@ import {Router} from 'express';
 import {check} from 'express-validator';
 import User from '../models/User';
 import auth from '../middleware/auth-middleware';
-import {CreateUser} from "../controllers/CreateUserController";
-import {LoginUser} from '../controllers/LoginUserController';
-import {GetAllUsers} from '../controllers/GetAllUsersController';
+import {CreateUser, LoginUser, GetAllUsers} from '../controllers/UserControllers'
 
 const router = Router();
 
@@ -20,7 +18,7 @@ router.post(
         // check('phone', "Invalid phone input").isMobilePhone("any"),
         check('password', "Invalid password length").isLength({min: 8})
     ],
-  CreateUser)
+    CreateUser)
 
 router.post(
     '/login',
@@ -31,7 +29,7 @@ router.post(
     LoginUser
 )
 
-router.get('/', auth,GetAllUsers)
+router.get('/', auth, GetAllUsers)
 
 router.get('/user/:id', auth, async (req, res) => {
     try {
@@ -56,7 +54,7 @@ router.patch('/editUser/:id', auth, async (req, res) => {
     try {
         const id = req.params.id
         const updates = req.body
-        const advert = await User.findByIdAndUpdate(id,updates)
+        const advert = await User.findByIdAndUpdate(id, updates)
         res.json(advert)
     } catch (e) {
         console.log(e)
