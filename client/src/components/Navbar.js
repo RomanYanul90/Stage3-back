@@ -1,4 +1,4 @@
-import React, {useContext,useState,useEffect,useCallback} from "react";
+import React, {useContext, useState, useEffect, useCallback} from "react";
 import {NavLink} from 'react-router-dom';
 import {useHistory} from "react-router-dom";
 import {AuthContext} from "../context/AuthContext";
@@ -10,10 +10,9 @@ export const Navbar = () => {
 
     const auth = useContext(AuthContext)
     let userId = undefined
-    if(auth.userId){
+    if (auth.userId) {
         userId = auth.userId
     }
-    // console.log(userId)
 
     const {request} = useHttp()
 
@@ -27,7 +26,6 @@ export const Navbar = () => {
         }
     }
     const id = selectId(userId)
-    // console.log(id)
     const history = useHistory()
     const logoutHandler = (e) => {
         e.preventDefault()
@@ -35,30 +33,39 @@ export const Navbar = () => {
         history.push('/')
     }
 
-    const getUserName = useCallback(async ()=>{
-        try{
-            const user = await request(`/api/auth/user/${id}`, "GET",null, {Authorization: `Bearer ${auth.token}`})
-            // console.log(user)
+    const getUserName = useCallback(async () => {
+        try {
+            const user = await request(`/api/auth/user/${id}`, "GET", null, {Authorization: `Bearer ${auth.token}`})
             setUser(user.userName)
-        }catch (e){
+        } catch (e) {
         }
-    },[auth.token,request,id])
+    }, [auth.token, request, id])
 
     useEffect(() => {
-        if(id){getUserName()}
-    }, [getUserName,id])
+        if (id) {
+            getUserName()
+        }
+    }, [getUserName, id])
 
     return (
-        <nav>
-            <span>Stage 3</span>
-            <ul>
-                <li><NavLink to='/createAdvert'>Create</NavLink></li>
-                <li><NavLink to='/userAdverts'>My adverts</NavLink></li>
-                <li><NavLink to='/allAdverts'>All adverts</NavLink></li>
-                <li><NavLink to='/usersList'>All users</NavLink></li>
-                <li><a href='/' onClick={logoutHandler}>Log out</a></li>
-            </ul>
-            <p>User: <NavLink to={`/userPage/${id}`}>{user}</NavLink></p>
-        </nav>
+        <header className='main-header'>
+            <span className='header-title'>Stage 3</span>
+            <nav className='header-navigation'>
+                <ul>
+                    <li><NavLink to='/createAdvert'>Create</NavLink></li>
+                    <li><NavLink to='/userAdverts'>My adverts</NavLink></li>
+                    <li><NavLink to='/allAdverts'>All adverts</NavLink></li>
+                    <li><NavLink to='/usersList'>All users</NavLink></li>
+                    <li><a href='/' onClick={logoutHandler}>Log out</a></li>
+                </ul>
+                <p className='header-user-lable'>
+                    User:
+                    <NavLink className='header-userPage-link' to={`/userPage/${id}`}>
+                        {user}
+                    </NavLink>
+                </p>
+            </nav>
+        </header>
+
     )
 }

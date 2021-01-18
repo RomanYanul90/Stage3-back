@@ -16,14 +16,14 @@ function App() {
     }
 
     return (
-        <AuthContext.Provider value={{token, userId, login, logout, isAuth}}>
-
-            <Router>
-                {isAuth && <Navbar/>}
-                {routes}
-            </Router>
-        </AuthContext.Provider>
-
+        <div className='container'>
+            <AuthContext.Provider value={{token, userId, login, logout, isAuth}}>
+                <Router>
+                    {isAuth && <Navbar/>}
+                    {routes}
+                </Router>
+            </AuthContext.Provider>
+        </div>
     )
 }
 
