@@ -55,7 +55,7 @@ export const CreateAdvertPage = () => {
     return (
         <div>
             <h2>Create advert</h2>
-            <form>
+            <form className='advert-form'>
                 <div>
                     <label>Title</label>
                     <input type="text" name="title" onChange={changeHandler}/>

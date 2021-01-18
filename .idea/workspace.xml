@@ -1,12 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1b57e755-6e85-4ce4-80b4-936e54f1958e" name="Default Changelist" comment="Minor Changes">
+    <list default="true" id="1b57e755-6e85-4ce4-80b4-936e54f1958e" name="Default Changelist" comment="First styles added">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/client/.eslintcache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/client/public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/Navbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Navbar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/AdvertCard.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/AdvertCard.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/AdvertsList.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/AdvertsList.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/AllAdvertsPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/AllAdvertsPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/AllUsersPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/AllUsersPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/CreateAdvertPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/CreateAdvertPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/UserCard.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/UserCard.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/UsersList.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/UsersList.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/index.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -75,7 +79,9 @@
       <workItem from="1610884729186" duration="27745000" />
       <workItem from="1610923736241" duration="5575000" />
       <workItem from="1610929365040" duration="423000" />
-      <workItem from="1610967300656" duration="29603000" />
+      <workItem from="1610967300656" duration="29767000" />
+      <workItem from="1611007477612" duration="75000" />
+      <workItem from="1611007793123" duration="2543000" />
     </task>
     <task id="LOCAL-00001" summary="Create user and register">
       <created>1609707672303</created>
@@ -224,7 +230,14 @@
       <option name="project" value="LOCAL" />
       <updated>1610994506286</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="First styles added">
+      <created>1611004599906</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1611004599906</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -263,6 +276,7 @@
     <MESSAGE value="Server structure ready" />
     <MESSAGE value="New method for users adverts render" />
     <MESSAGE value="Minor Changes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Minor Changes" />
+    <MESSAGE value="First styles added" />
+    <option name="LAST_COMMIT_MESSAGE" value="First styles added" />
   </component>
 </project>

@@ -8,12 +8,12 @@ export const UserCard = ({user}) => {
     }
     return (
         <div >
-            <div style={{border: "solid"}}>
+            <div className='user-card'>
                 <div >
                     <p>User name: {user.userName}</p>
                     <p>Email: {user.email}</p>
                 </div>
-                <button onClick={showHandler}>Show adverts created by this user</button>
+                <button className='btn' onClick={showHandler}>Show adverts created by this user</button>
             </div>
             {showAdverts && <ChoosenUserAdverts ownerName={user.userName}/> }
         </div>

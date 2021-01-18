@@ -51,10 +51,9 @@ export const AllUsersPage = () => {
 
     return (
         <div>
-            <form>
-                <label>Find user</label>
-                <input type='text' name='userName' onChange={changeInputHandler}/>
-                <button onClick={searchHandler}>Search</button>
+            <form className='search-form'>
+                <input type='text' name='userName' placeholder='UserName:' onChange={changeInputHandler}/>
+                <button  onClick={searchHandler}>Find by user name</button>
             </form>
             {!loading && <UsersList users={users}/>}
         </div>

@@ -18,10 +18,9 @@ export const AdvertsList = ({adverts}) => {
         })
     }
     return (
-        <div>
-            <div style={{display:'flex',
-            flexDirection:"row"}}>
-                <p>Sort by: </p>
+        <div className='adverts-list'>
+            <div className='sort-select'>
+                <label>Sort by: </label>
                 <select onChange={(e)=>{
                     setSortParam(e.target.value)
                 }}>

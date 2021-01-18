@@ -2,7 +2,7 @@ import React from "react";
 
 export const AdvertCard = ({advert}) => {
     return (
-        <div style={{border: "solid"}}>
+        <div className='advert-card'>
             <h2>{advert.title}</h2>
             <p>Category: {advert.category}</p>
             <p>Description: {advert.description}</p>

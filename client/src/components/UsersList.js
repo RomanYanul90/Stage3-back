@@ -10,7 +10,7 @@ export const UsersList = ({users}) => {
         <div>
             {users.map((el, index) => {
                 return <div key={el._id}>
-                    <h2>User {index + 1})</h2>
+                    {/*<h2>User {index + 1})</h2>*/}
                     <UserCard user={el}/>
                 </div>
             })}

@@ -63,11 +63,11 @@ export const AllAdvertsPage = () => {
         return <LoadingPage/>
     }
     return (
-        <div>
-            <form>
-                <label>Find advert</label>
-                <input type='text' name='title' onChange={changeInputHandler}/>
-                <button onClick={searchHandler}>Search</button>
+        <div >
+            <form className='search-form'>
+                {/*<label>Find advert by title: </label>*/}
+                <input type='text' name='title' placeholder='Title:' onChange={changeInputHandler}/>
+                <button className='btn' onClick={searchHandler}>Find advert by title</button>
 
             </form>
             {!adverts.length || loading ? <p>No adverts</p> : <AdvertsList adverts={adverts}/>}
