@@ -20,7 +20,7 @@ function App() {
             <AuthContext.Provider value={{token, userId, login, logout, isAuth}}>
                 <Router>
                     {isAuth && <Navbar/>}
-                    {routes}
+                    <div className='main'>{routes}</div>
                 </Router>
             </AuthContext.Provider>
         </div>

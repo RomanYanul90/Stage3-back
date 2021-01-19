@@ -91,47 +91,62 @@ body, html {
 
 }
 
-.search-form input{
+.search-form input {
     background-color: #D5F8EC;
     width: 100%;
 }
 
-.btn{
+.btn {
     background-color: #EAF8F3;
     font-size: 1em;
 }
 
-.sort-select{
+.sort-select {
     display: flex;
     flex-direction: row;
     margin-bottom: 10px;
 }
 
-.sort-select label{
+.sort-select label {
     font-size: 1em;
 }
 
-.sort-select select{
+.sort-select select {
     font-size: 1em;
     background-color: #EAF8F3;
 }
 
-.user-card{
+.user-card {
     color: black;
     padding: 10px;
     margin-bottom: 20px;
     border: 0.1em solid gray;
 }
 
-.user-form{
+.user-form {
 
 }
 
-.user-form input{
+.user-form input {
     background-color: #D5F8EC;
 }
 
 
-.user-form label{
+.user-form label {
     max-width: 80px;
+}
+
+@media (min-width: 620px) {
+    .container {
+        margin: 1.25em auto;
+        flex-direction: row;
+    }
+
+    .main-header{
+        width: 20%;
+    }
+
+    .main {
+        width: 80%;
+    }
 }

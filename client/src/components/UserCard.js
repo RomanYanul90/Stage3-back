@@ -1,11 +1,11 @@
 import React, {useState} from "react";
-import {ChoosenUserAdverts} from './ChoosenUserAdverts'
+import {ChoosenUserAdverts} from './ChoosenUserAdverts';
 
 export const UserCard = ({user}) => {
-    const [showAdverts, setShowAdvert] = useState(false)
+    const [showAdverts, setShowAdvert] = useState(false);
     const showHandler = () => {
         setShowAdvert(!showAdverts)
-    }
+    };
     return (
         <div >
             <div className='user-card'>
@@ -18,4 +18,4 @@ export const UserCard = ({user}) => {
             {showAdverts && <ChoosenUserAdverts ownerName={user.userName}/> }
         </div>
     )
-}
+};

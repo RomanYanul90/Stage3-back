@@ -5,22 +5,21 @@ import {LoadingPage} from "./LoadingPage";
 import {AdvertsList} from "./AdvertsList";
 
 export const ChoosenUserAdverts = ({ownerName})=>{
-    const {token} = useContext(AuthContext)
-    const {request, loading} = useHttp()
-    const [adverts, setAdverts] = useState([])
-    // const advertId = useParams().id
+    const {token} = useContext(AuthContext);
+    const {request, loading} = useHttp();
+    const [adverts, setAdverts] = useState([]);
 
     const getAdverts = useCallback(async () => {
         try {
-            const result = await request(`/api/advert/byOwnerName/${ownerName}`, "GET", null, {Authorization: `Bearer ${token}`})
+            const result = await request(`/api/advert/byOwnerName/${ownerName}`, "GET", null, {Authorization: `Bearer ${token}`});
             setAdverts(result)
         } catch (e) {
         }
-    }, [token, ownerName, request])
+    }, [token, ownerName, request]);
 
     useEffect(() => {
         getAdverts()
-    }, [getAdverts])
+    }, [getAdverts]);
 
     if (loading) {
         return <LoadingPage/>
@@ -30,12 +29,4 @@ export const ChoosenUserAdverts = ({ownerName})=>{
             {!loading&&<AdvertsList adverts={adverts}/>}
         </div>
     )
-
-
-    // return(
-    //     <div>
-    //         <p>{userName}</p>
-    //         This user adverts will be rendered here!
-    //     </div>
-    // )
-}
+};

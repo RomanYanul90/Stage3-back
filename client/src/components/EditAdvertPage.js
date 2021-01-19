@@ -1,24 +1,23 @@
-import React, {useState, useEffect, useContext, useCallback} from 'react'
+import React, {useState, useEffect, useContext, useCallback} from 'react';
 import {useHttp} from "../hooks/httpHook";
 import {AuthContext} from "../context/AuthContext";
 import {useParams, useHistory} from "react-router-dom";
 import {LoadingPage} from "./LoadingPage";
-import {AdvertForm} from './statelessComponents/AdvertForm'
+import {AdvertForm} from './statelessComponents/AdvertForm';
 
 export const EditAdvertPage = () => {
-    const {token} = useContext(AuthContext)
-    const {request, loading} = useHttp()
-    const [advert, setAdvert] = useState(null)
-    const advertId = useParams().id
-    const history = useHistory()
-    const auth = useContext(AuthContext)
-
+    const {token} = useContext(AuthContext);
+    const {request, loading} = useHttp();
+    const [advert, setAdvert] = useState(null);
+    const advertId = useParams().id;
+    const history = useHistory();
+    const auth = useContext(AuthContext);
     const [form, setForm] = useState({
         title: "",
         description: "",
         category: "",
         price: "",
-    })
+    });
 
     const getAdvert = useCallback(async () => {
         try {
@@ -26,21 +25,21 @@ export const EditAdvertPage = () => {
             setAdvert(result)
         } catch (e) {
         }
-    }, [token, advertId, request])
+    }, [token, advertId, request]);
 
     useEffect(() => {
         getAdvert()
-    }, [getAdvert])
+    }, [getAdvert]);
 
     const changeHandler = (e) => {
         setForm({...form, [e.target.name]: e.target.value})
     }
 
     const editAdvertHandler = async (e) => {
-        e.preventDefault()
+        e.preventDefault();
 
         try {
-            const data = await request(`/api/advert/editAdvert/${advertId}`, "PATCH", {
+             await request(`/api/advert/editAdvert/${advertId}`, "PATCH", {
                 title: form.title ? form.title : advert.title,
                 category: form.category ? form.category : advert.category,
                 description: form.description ? form.description : advert.description,
@@ -50,7 +49,7 @@ export const EditAdvertPage = () => {
         } catch (e) {
         }
         history.push(`/advert/${advert._id}`)
-    }
+    };
 
     if (loading) {
         return <LoadingPage/>
@@ -67,4 +66,4 @@ export const EditAdvertPage = () => {
             </div>}
         </div>
     )
-}
+};

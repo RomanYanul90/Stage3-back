@@ -1,42 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1b57e755-6e85-4ce4-80b4-936e54f1958e" name="Default Changelist" comment="Minor changes on server side">
-      <change afterPath="$PROJECT_DIR$/client/src/components/statelessComponents/UserForm.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/services/AdvertsServices.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/services/UsersSevices.js" afterDir="false" />
+    <list default="true" id="1b57e755-6e85-4ce4-80b4-936e54f1958e" name="Default Changelist" comment="code style and components sort">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/client/.eslintcache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/public/loader.gif" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/AdvertCard.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/statelessComponents/AdvertCard.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/components/AdvertPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/AdvertPage.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/components/AdvertsList.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/AdvertsList.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/AllAdvertsPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/AllAdvertsPage.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/components/AllUsersPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/AllUsersPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/ChoosenUserAdverts.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/ChoosenUserAdverts.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/components/CreateAdvertPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/CreateAdvertPage.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/components/CreateUserPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/CreateUserPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/Dashboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Dashboard.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/components/EditAdvertPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/EditAdvertPage.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/components/EditUserPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/EditUserPage.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/components/LoadingPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/LoadingPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/LoginPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/LoginPage.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/components/Navbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Navbar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/RemoveAdvertPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/RemoveAdvertPage.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/components/RemoveUserPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/RemoveUserPage.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/components/UserAdvertsPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/UserAdvertsPage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/UserForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/statelessComponents/AdvertForm.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/context/AuthContext.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/context/AuthContext.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/UserCard.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/UserCard.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/UserPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/UserPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/UsersList.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/UsersList.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/hooks/authHook.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/hooks/authHook.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/hooks/errorHook.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/hooks/errorHook.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/hooks/httpHook.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/hooks/httpHook.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/routes.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/AdvertControllers.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/AdvertControllers.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/UserControllers.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/UserControllers.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/middleware/auth-middleware.js" beforeDir="false" afterPath="$PROJECT_DIR$/middleware/auth-middleware.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/advert-routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/advert-routes.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/auth-routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/auth-routes.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/AdvertServices.js" beforeDir="false" afterPath="$PROJECT_DIR$/services/AdvertServices.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/UserServices.js" beforeDir="false" afterPath="$PROJECT_DIR$/services/UserServices.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/services/AdvertsServices.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/hooks/selectId.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/services/UsersSevices.js" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,7 +55,8 @@
     <setting file="file://$PROJECT_DIR$/controllers/UserControllers.js" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/client/src/hooks/errorHook.js" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/client/src/components/EditUserPage.js" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/client/src/components/EditAdvertPage.js" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/client/src/components/AdvertPage.js" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/client/src/components/EditAdvertPage.js" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/client/src/components/statelessComponents/AdvertForm.js" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/client/src/hooks/httpHook.js" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/client/src/components/AllAdvertsPage.js" root0="FORCE_HIGHLIGHTING" />
@@ -71,7 +64,7 @@
     <setting file="file://$PROJECT_DIR$/routes/auth-routes.js" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/routes/advert-routes.js" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/client/src/components/CreateAdvertPage.js" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/client/src/components/UserAdvertsPage.js" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/client/src/components/UserAdvertsPage.js" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/client/src/components/CreateUserPage.js" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/services/UserServices.js" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/index.js" root0="FORCE_HIGHLIGHTING" />
@@ -90,7 +83,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/node_modules/eslint" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
@@ -144,7 +137,8 @@
       <workItem from="1610967300656" duration="29767000" />
       <workItem from="1611007477612" duration="75000" />
       <workItem from="1611007793123" duration="2616000" />
-      <workItem from="1611054125085" duration="20223000" />
+      <workItem from="1611054125085" duration="28412000" />
+      <workItem from="1611090187680" duration="2171000" />
     </task>
     <task id="LOCAL-00001" summary="Create user and register">
       <created>1609707672303</created>
@@ -314,7 +308,14 @@
       <option name="project" value="LOCAL" />
       <updated>1611067463677</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="code style and components sort">
+      <created>1611080946423</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1611080946423</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -356,7 +357,8 @@
     <MESSAGE value="First styles added" />
     <MESSAGE value="demo styles" />
     <MESSAGE value="Minor changes on server side" />
-    <option name="LAST_COMMIT_MESSAGE" value="Minor changes on server side" />
+    <MESSAGE value="code style and components sort" />
+    <option name="LAST_COMMIT_MESSAGE" value="code style and components sort" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

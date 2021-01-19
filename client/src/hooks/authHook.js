@@ -12,6 +12,7 @@ export const useAuth = () => {
         setUserId(id);
         localStorage.setItem(userData, JSON.stringify({userId: id, token: jwt}))
     }, []);
+
     const logout = useCallback(() => {
         setToken(null);
         setUserId(null);
@@ -27,4 +28,4 @@ export const useAuth = () => {
     }, [login]);
 
     return {login, logout, token, userId, ready}
-}
+};

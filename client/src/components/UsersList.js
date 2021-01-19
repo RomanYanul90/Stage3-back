@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import {UserCard} from "./UserCard";
 
 export const UsersList = ({users}) => {
@@ -8,12 +8,11 @@ export const UsersList = ({users}) => {
     }
     return (
         <div>
-            {users.map((el, index) => {
+            {users.map((el) => {
                 return <div key={el._id}>
-                    {/*<h2>User {index + 1})</h2>*/}
                     <UserCard user={el}/>
                 </div>
             })}
         </div>
     )
-}
+};

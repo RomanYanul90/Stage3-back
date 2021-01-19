@@ -3,48 +3,40 @@ import {NavLink} from 'react-router-dom';
 import {useHistory} from "react-router-dom";
 import {AuthContext} from "../context/AuthContext";
 import {useHttp} from "../hooks/httpHook";
+import {selectId} from '../hooks/selectId';
 
 export const Navbar = () => {
-    const [user, setUser] = useState(null)
+    const [user, setUser] = useState(null);
+    const auth = useContext(AuthContext);
+    const {request} = useHttp();
+    const history = useHistory();
 
-    const auth = useContext(AuthContext)
-    let userId = undefined
+    let idFromAuth = undefined;
     if (auth.userId) {
-        userId = auth.userId
+        idFromAuth = auth.userId
     }
 
-    const {request} = useHttp()
+    const id = selectId(idFromAuth);
 
-    const selectId = (id) => {
-        if (typeof (id) === "string") {
-            return id
-        }
-        if (typeof (id) === "object") {
-            const newId = id.userId
-            return selectId(newId)
-        }
-    }
-    const id = selectId(userId)
-    const history = useHistory()
     const logoutHandler = (e) => {
-        e.preventDefault()
-        auth.logout()
+        e.preventDefault();
+        auth.logout();
         history.push('/')
-    }
+    };
 
     const getUserName = useCallback(async () => {
         try {
-            const user = await request(`/api/auth/user/${id}`, "GET", null, {Authorization: `Bearer ${auth.token}`})
+            const user = await request(`/api/auth/user/${id}`, "GET", null, {Authorization: `Bearer ${auth.token}`});
             setUser(user.userName)
         } catch (e) {
         }
-    }, [auth.token, request, id])
+    }, [auth.token, request, id]);
 
     useEffect(() => {
         if (id) {
             getUserName()
         }
-    }, [getUserName, id])
+    }, [getUserName, id]);
 
     return (
         <header className='main-header'>
@@ -67,4 +59,4 @@ export const Navbar = () => {
         </header>
 
     )
-}
+};

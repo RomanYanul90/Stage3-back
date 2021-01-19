@@ -6,22 +6,22 @@ import {LoadingPage} from "./LoadingPage";
 import {Link} from "react-router-dom";
 
 export const UserPage = () => {
-    const {token} = useContext(AuthContext)
-    const {request, loading} = useHttp()
-    const [user, setUser] = useState(null)
-    const userId = useParams().id
+    const {token} = useContext(AuthContext);
+    const {request, loading} = useHttp();
+    const [user, setUser] = useState(null);
+    const userId = useParams().id;
 
     const getUser = useCallback(async () => {
         try {
-            const result = await request(`/api/auth/user/${userId}`, "GET", null, {Authorization: `Bearer ${token}`})
+            const result = await request(`/api/auth/user/${userId}`, "GET", null, {Authorization: `Bearer ${token}`});
             setUser(result)
         } catch (e) {
         }
-    }, [token, userId, request])
+    }, [token, userId, request]);
 
     useEffect(() => {
         getUser()
-    }, [getUser])
+    }, [getUser]);
 
     if (loading) {
         return <LoadingPage/>
@@ -45,4 +45,4 @@ export const UserPage = () => {
             }
         </div>
     )
-}
+};

@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import {Link, Redirect, Route, Switch} from "react-router-dom";
 import {CreateUserPage} from "./CreateUserPage";
 import {LoginPage} from "./LoginPage";
@@ -22,4 +22,4 @@ export const Dashboard = () => {
         </div>
 
     )
-}
+};
