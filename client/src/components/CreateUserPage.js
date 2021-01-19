@@ -38,7 +38,7 @@ export const CreateUserPage = () => {
     return (
         <div>
             <h2>Create user</h2>
-            <form >
+            <form className='user-form'>
                 <div>
                     <label>First name</label>
                     <input type="text" name="firstName" onChange={changeHandler}/>

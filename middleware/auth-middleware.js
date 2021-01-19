@@ -1,7 +1,7 @@
-const jwt = require('jsonwebtoken');
-const config = require('../config/default.json')
+import jwt from 'jsonwebtoken'
+import config from '../config/default.json'
 
-module.exports = (req, res, next) => {
+export default (req, res, next) => {
     if (req.method === 'OPTIONS') {
         return next();
     }

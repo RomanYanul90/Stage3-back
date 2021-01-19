@@ -122,3 +122,16 @@ body, html {
     margin-bottom: 20px;
     border: 0.1em solid gray;
 }
+
+.user-form{
+
+}
+
+.user-form input{
+    background-color: #D5F8EC;
+}
+
+
+.user-form label{
+    max-width: 80px;
+}
