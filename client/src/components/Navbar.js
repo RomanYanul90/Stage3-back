@@ -4,7 +4,6 @@ import {useHistory} from "react-router-dom";
 import {AuthContext} from "../context/AuthContext";
 import {useHttp} from "../hooks/httpHook";
 
-
 export const Navbar = () => {
     const [user, setUser] = useState(null)
 

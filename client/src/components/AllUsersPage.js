@@ -1,5 +1,4 @@
 import React, {useState, useContext, useEffect, useCallback} from 'react'
-// import {useAuth} from "../hooks/authHook";
 import {AuthContext} from "../context/AuthContext";
 import {LoadingPage} from "./LoadingPage";
 import {useHttp} from "../hooks/httpHook";

@@ -1,10 +1,9 @@
 import React, {useState, useEffect, useContext, useCallback} from 'react'
 import {useHttp} from "../hooks/httpHook";
-// import {useMessage} from "../hooks/errorHook";
 import {AuthContext} from "../context/AuthContext";
 import {useParams, useHistory} from "react-router-dom";
 import {LoadingPage} from "./LoadingPage";
-// import {AdvertCard} from "./AdvertCard";
+import {UserForm} from "./statelessComponents/UserForm"
 
 export const EditUserPage = () => {
     const {token} = useContext(AuthContext)
@@ -62,29 +61,12 @@ export const EditUserPage = () => {
             {user &&
             <div>
                 <h2>Edit user</h2>
-                <form>
-                    <div>
-                        <label>First name</label>
-                        <input type="text" name="firstName" defaultValue={user.firstName} onChange={changeHandler}/>
-                    </div>
-                    <div>
-                        <label>Last name</label>
-                        <input type="text" name="lastName" defaultValue={user.lastName} onChange={changeHandler}/>
-                    </div>
-                    <div>
-                        <label>User name</label>
-                        <input type="text" name="userName" defaultValue={user.userName} onChange={changeHandler}/>
-                    </div>
-                    <div>
-                        <label>Email</label>
-                        <input type="email" name="email" defaultValue={user.email} onChange={changeHandler}/>
-                    </div>
-                    <div>
-                        <label>Phone</label>
-                        <input type="text" name="phone" defaultValue={user.phone} onChange={changeHandler}/>
-                    </div>
-                    <button onClick={editUserHandler}>Save changes</button>
-                </form>
+                <UserForm
+                    changeHandler = {changeHandler}
+                    submitMethod  = {editUserHandler}
+                    defaultValues={[user.firstName,user.lastName,user.userName,user.email,user.phone]}
+                    isCreatePage={false}
+                />
             </div>}
 
         </div>

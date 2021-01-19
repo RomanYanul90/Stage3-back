@@ -2,23 +2,23 @@ import {Router} from 'express';
 import auth from '../middleware/auth-middleware';
 import {userValidationParams, loginValidationParams} from '../middleware/validation-middleware';
 import {
-    CreateUser,
-    LoginUser,
-    GetAllUsers,
-    GetUserById,
-    GetUserByUserName,
-    EditUser,
-    DeleteUser
+    createUser,
+    loginUser,
+    getAllUsers,
+    getUserById,
+    getUserByUserName,
+    editUser,
+    deleteUser
 } from '../controllers/UserControllers';
 
 const router = Router();
 
-router.post('/register', userValidationParams, CreateUser);
-router.post('/login', loginValidationParams, LoginUser);
-router.get('/', auth, GetAllUsers);
-router.get('/user/:id', auth, GetUserById);
-router.get('/byUserName/:userName', auth, GetUserByUserName);
-router.patch('/editUser/:id', auth, EditUser);
-router.delete('/deleteUser/:id', auth, DeleteUser);
+router.post('/register', userValidationParams, createUser);
+router.post('/login', loginValidationParams, loginUser);
+router.get('/', auth, getAllUsers);
+router.get('/user/:id', auth, getUserById);
+router.get('/byUserName/:userName', auth, getUserByUserName);
+router.patch('/editUser/:id', auth, editUser);
+router.delete('/deleteUser/:id', auth, deleteUser);
 
 export default router

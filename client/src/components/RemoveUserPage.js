@@ -2,7 +2,6 @@ import React, {useCallback, useContext} from 'react'
 import {useParams} from "react-router-dom";
 import {useHttp} from "../hooks/httpHook";
 import {AuthContext} from "../context/AuthContext";
-// import {LoadingPage} from "./LoadingPage";
 import {useHistory} from "react-router-dom";
 
 export const RemoveUserPage = () => {

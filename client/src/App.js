@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import {BrowserRouter as Router} from "react-router-dom";
 import {useRoutes} from "./routes";
 import {useAuth} from "./hooks/authHook";
@@ -7,9 +7,9 @@ import {Navbar} from "./components/Navbar";
 import {LoadingPage} from "./components/LoadingPage";
 
 function App() {
-    const {token, userId, login, logout,ready} = useAuth()
-    const isAuth = !!token
-    const routes = useRoutes(isAuth)
+    const {token, userId, login, logout,ready} = useAuth();
+    const isAuth = !!token;
+    const routes = useRoutes(isAuth);
 
     if(!ready){
         return <LoadingPage/>

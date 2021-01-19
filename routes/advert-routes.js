@@ -2,25 +2,25 @@ import {Router} from 'express';
 import auth from '../middleware/auth-middleware';
 import {advertValidationParams} from '../middleware/validation-middleware';
 import {
-    CreateAdvert,
-    GetAllAdverts,
-    GetAdvertById,
-    GetCurrentUserAdverts,
-    GetAdvertsByOwnerName,
-    FindAdvertBytitle,
-    EditAdvert,
-    DeleteAdvert
+    createAdvert,
+    getAllAdverts,
+    getAdvertById,
+    getCurrentUserAdverts,
+    getAdvertsByOwnerName,
+    findAdvertBytitle,
+    editAdvert,
+    deleteAdvert
 } from '../controllers/AdvertControllers'
 
 const router = Router();
 
-router.post('/create', auth, advertValidationParams, CreateAdvert);
-router.get('/', auth, GetAllAdverts);
-router.get('/byId/:id', auth, GetAdvertById);
-router.get('/userAdverts', auth, GetCurrentUserAdverts);
-router.get('/byOwnerName/:owner', auth, GetAdvertsByOwnerName);
-router.get('/byTitle/:title', auth, FindAdvertBytitle);
-router.patch('/editAdvert/:id', auth, EditAdvert);
-router.delete('/deleteAdvert/:id', auth, DeleteAdvert);
+router.post('/create', auth, advertValidationParams, createAdvert);
+router.get('/', auth, getAllAdverts);
+router.get('/byId/:id', auth, getAdvertById);
+router.get('/userAdverts', auth, getCurrentUserAdverts);
+router.get('/byOwnerName/:owner', auth, getAdvertsByOwnerName);
+router.get('/byTitle/:title', auth, findAdvertBytitle);
+router.patch('/editAdvert/:id', auth, editAdvert);
+router.delete('/deleteAdvert/:id', auth, deleteAdvert);
 
 export default router

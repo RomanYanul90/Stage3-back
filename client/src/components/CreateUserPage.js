@@ -1,7 +1,7 @@
 import React, {useState,useEffect} from 'react'
 import {useHttp} from "../hooks/httpHook";
 import {useMessage} from "../hooks/errorHook";
-// import {AuthContext} from "../context/AuthContext";
+import {UserForm} from "./statelessComponents/UserForm"
 
 export const CreateUserPage = () => {
     const { error, request, clearError} = useHttp()
@@ -38,33 +38,12 @@ export const CreateUserPage = () => {
     return (
         <div>
             <h2>Create user</h2>
-            <form className='user-form'>
-                <div>
-                    <label>First name</label>
-                    <input type="text" name="firstName" onChange={changeHandler}/>
-                </div>
-                <div>
-                    <label>Last name</label>
-                    <input type="text" name="lastName" onChange={changeHandler}/>
-                </div>
-                <div>
-                    <label>User name</label>
-                    <input type="text" name="userName" onChange={changeHandler}/>
-                </div>
-                <div>
-                    <label>Email</label>
-                    <input type="email" name="email" onChange={changeHandler}/>
-                </div>
-                <div>
-                    <label>Phone</label>
-                    <input type="text" name="phone" onChange={changeHandler}/>
-                </div>
-                <div>
-                    <label>Password</label>
-                    <input type="password" name="password" onChange={changeHandler}/>
-                </div>
-                <button onClick={createUserHandler}>Create user</button>
-            </form>
+            <UserForm
+                changeHandler = {changeHandler}
+                submitMethod  = {createUserHandler}
+                defaultValues={[]}
+                isCreatePage={true}
+            />
         </div>
     )
-}
+};

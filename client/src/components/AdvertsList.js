@@ -1,5 +1,5 @@
 import React,{useState} from "react";
-import {AdvertCard} from "./AdvertCard";
+import {AdvertCard} from "./statelessComponents/AdvertCard";
 import {Link} from "react-router-dom";
 
 export const AdvertsList = ({adverts}) => {
@@ -32,7 +32,6 @@ export const AdvertsList = ({adverts}) => {
             {sortAdverts(adverts,sortParam).map((el, index) => {
                 return <div key={el._id}>
                     <Link to={`/advert/${el._id}`}>
-                    {/*<h2>Advert {index + 1})</h2>*/}
                     <AdvertCard  advert={el}/>
                     </Link>
                 </div>

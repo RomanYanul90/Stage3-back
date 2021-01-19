@@ -1,16 +1,16 @@
 import {validationResult} from "express-validator";
 import {
-    CreateAdvertService,
-    GetAllAdvertsService,
-    GetAdvertByIdService,
-    GetCurrentUserAdvertsService,
-    GetAdvertsByOwnerNameService,
-    FindAdvertBytitleService,
-    EditAdvertService,
-    DeleteAdvertService
+    createAdvertService,
+    getAllAdvertsService,
+    getAdvertByIdService,
+    getCurrentUserAdvertsService,
+    getAdvertsByOwnerNameService,
+    findAdvertByTitleService,
+    editAdvertService,
+    deleteAdvertService
 } from '../services/AdvertServices';
 
-export const CreateAdvert = async (req, res) => {
+export const createAdvert = async (req, res) => {
     try {
         const errors = validationResult(req);
 
@@ -22,85 +22,79 @@ export const CreateAdvert = async (req, res) => {
         }
         const {title, description, category, price, created, userName} = req.body;
         const ownerId = req.user.userId;
-        const advert = await CreateAdvertService(title, description, category, price, created, userName, ownerId);
+        const advert = await createAdvertService(title, description, category, price, created, userName, ownerId);
         res.status(201).json({advert});
     } catch (e) {
-        console.log(e)
         res.status(500).json({message: "Something went wrong."});
     }
-}
+};
 
-export const GetAllAdverts = async (req, res) => {
+export const getAllAdverts = async (req, res) => {
     try {
-        const adverts = await GetAllAdvertsService()
+        const adverts = await getAllAdvertsService()
         res.json(adverts);
     } catch (e) {
         res.status(500).json({message: "Something went wrong."});
     }
-}
+};
 
-export const GetAdvertById = async (req, res) => {
+export const getAdvertById = async (req, res) => {
     try {
         const id = req.params.id;
-        const advert = await GetAdvertByIdService(id);
+        const advert = await getAdvertByIdService(id);
         res.json(advert);
     } catch (e) {
         res.status(500).json({message: "Something went wrong."});
     }
-}
+};
 
-export const GetCurrentUserAdverts = async (req, res) => {
+export const getCurrentUserAdverts = async (req, res) => {
     try {
         const ownerId = req.user.userId;
-        const adverts = await GetCurrentUserAdvertsService(ownerId);
+        const adverts = await getCurrentUserAdvertsService(ownerId);
         res.json(adverts);
     } catch (e) {
-        console.log(e)
         res.status(500).json({message: "Something went wrong."});
     }
-}
+};
 
-export const GetAdvertsByOwnerName = async (req, res) => {
+export const getAdvertsByOwnerName = async (req, res) => {
     try {
         const owner = req.params.owner;
-        const adverts = await GetAdvertsByOwnerNameService(owner);
+        const adverts = await getAdvertsByOwnerNameService(owner);
         res.json(adverts);
     } catch (e) {
-        console.log(e)
         res.status(500).json({message: "Something went wrong."});
     }
-}
+};
 
-export const FindAdvertBytitle = async (req, res) => {
+export const findAdvertBytitle = async (req, res) => {
     try {
         const title = req.params.title;
-        const adverts = await FindAdvertBytitleService(title);
+        const adverts = await findAdvertByTitleService(title);
         res.json(adverts);
     } catch (e) {
-        console.log(e)
         res.status(500).json({message: "Something went wrong."});
     }
-}
+};
 
-export const EditAdvert = async (req, res) => {
+export const editAdvert = async (req, res) => {
     try {
         const id = req.params.id;
         const updates = req.body;
-        const advert = await EditAdvertService(id, updates);
+        const advert = await editAdvertService(id, updates);
         res.json(advert);
     } catch (e) {
-        console.log(e)
         res.status(500).json({message: "Something went wrong."});
     }
-}
+};
 
-export const DeleteAdvert = async (req, res) => {
+export const deleteAdvert = async (req, res) => {
     try {
         const id = req.params.id;
-        const advert = await DeleteAdvertService(id);
+        const advert = await deleteAdvertService(id);
         res.json(advert);
     } catch (e) {
-        console.log(e)
         res.status(500).json({message: "Something went wrong."});
     }
-}
+};

@@ -1,44 +1,37 @@
 import Advert from '../models/Advert';
 
-export const CreateAdvertService = async (title, description, category, price, created, userName, ownerId) => {
+export const createAdvertService = async (title, description, category, price, created, userName, ownerId) => {
     const advert = new Advert({
         title, description, category, price, created, ownerId, ownerUserName: userName
     });
-    await advert.save()
+    await advert.save();
     return advert;
-}
+};
 
-export const GetAllAdvertsService = async () => {
-    const adverts = await Advert.find();
-    return adverts;
-}
+export const getAllAdvertsService = async () => {
+    return await Advert.find();
+};
 
-export const GetAdvertByIdService = async (id) => {
-    const advert = await Advert.findById(id);
-    return advert;
-}
+export const getAdvertByIdService = async (id) => {
+    return await Advert.findById(id);
+};
 
-export const GetCurrentUserAdvertsService = async (ownerId) => {
-    const adverts = await Advert.find({ownerId: ownerId});
-    return adverts;
-}
+export const getCurrentUserAdvertsService = async (ownerId) => {
+    return await Advert.find({ownerId: ownerId});
+};
 
-export const GetAdvertsByOwnerNameService = async (owner) => {
-    const adverts = await Advert.find({ownerUserName: owner});
-    return adverts;
-}
+export const getAdvertsByOwnerNameService = async (owner) => {
+    return await Advert.find({ownerUserName: owner});
+};
 
-export const FindAdvertBytitleService = async (title) => {
-    const adverts = await Advert.find({title: title});
-    return adverts;
-}
+export const findAdvertByTitleService = async (title) => {
+    return await Advert.find({title: title});
+};
 
-export const EditAdvertService = async (id,updates) => {
-    const advert = await Advert.findByIdAndUpdate(id, updates);
-    return advert;
-}
+export const editAdvertService = async (id, updates) => {
+    return await Advert.findByIdAndUpdate(id, updates);
+};
 
-export const DeleteAdvertService = async (id) => {
-    const advert = await Advert.findByIdAndDelete(id);
-    return advert;
-}
+export const deleteAdvertService = async (id) => {
+    return await Advert.findByIdAndDelete(id);
+};
