@@ -252,6 +252,7 @@ body, html {
     .container {
         margin: 1.25em auto;
         flex-direction: row;
+        justify-content: space-between;
     }
 
     .main-header {
@@ -262,6 +263,7 @@ body, html {
     }
 
     .main {
+        width: 100%;
     }
 
     .header-navigation ul{
