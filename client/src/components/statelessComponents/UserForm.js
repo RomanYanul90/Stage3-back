@@ -31,7 +31,7 @@ export const UserForm = (props) => {
                 <label>Password</label>
                 <input type="password" name="password" onChange={props.changeHandler}/>
             </div>}
-            <button onClick={props.submitMethod}>Submit</button>
+            <button className='btn' onClick={props.submitMethod}>Submit</button>
         </form>
     )
 };

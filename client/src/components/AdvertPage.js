@@ -49,18 +49,18 @@ export const AdvertPage = () => {
         return <LoadingPage/>
     }
     return (
-        <div>
+        <>
             {!loading && advert &&
-            <div>
+            <section className='advert-section'>
                 <AdvertCard advert={advert}/>
                 {userId === advert.ownerId &&
-                <div>
-                    <button onClick={editRedirect}>Edit</button>
-                    <button onClick={removeRedirect}>Remove</button>
+                <div className='edit-remove-btns'>
+                    <button className='btn' onClick={editRedirect}>Edit</button>
+                    <button className='btn' onClick={removeRedirect}>Delete</button>
                 </div>
                 }
-            </div>
+            </section>
             }
-        </div>
+        </>
     )
 };

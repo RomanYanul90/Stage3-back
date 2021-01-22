@@ -67,7 +67,6 @@ export const EditUserPage = () => {
                     isCreatePage={false}
                 />
             </div>}
-
         </div>
     )
 };

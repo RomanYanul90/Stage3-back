@@ -7,12 +7,12 @@ export const UsersList = ({users}) => {
         return <p>There is no adverts created by current user</p>
     }
     return (
-        <div>
+        <>
             {users.map((el) => {
                 return <div key={el._id}>
                     <UserCard user={el}/>
                 </div>
             })}
-        </div>
+        </>
     )
 };

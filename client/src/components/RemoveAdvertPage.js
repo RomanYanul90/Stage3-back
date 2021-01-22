@@ -20,8 +20,9 @@ export const RemoveAdvertPage = () => {
     }, [token, advertId, request, history]);
 
     return (
-        <div>
-            <button onClick={removeAdvert}>Remove</button>
+        <div className='delete-msg'>
+            <h2>Are you sure you want to delete this ad?</h2>
+            <button className='btn' onClick={removeAdvert}>Delete</button>
         </div>
     )
 };

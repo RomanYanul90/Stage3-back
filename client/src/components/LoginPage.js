@@ -44,7 +44,7 @@ export const LoginPage = () => {
                         </div>
                     </div>
 
-                    <button onClick={loginHandler}>Submit</button>
+                    <button className='btn' onClick={loginHandler}>Log in</button>
                 </form>
         </section>
 

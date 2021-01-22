@@ -1,14 +1,15 @@
 import React, {useState, useCallback, useContext, useEffect} from 'react'
-import {useParams} from "react-router-dom";
+import {useParams,useHistory} from "react-router-dom";
 import {useHttp} from "../hooks/httpHook";
 import {AuthContext} from "../context/AuthContext";
 import {LoadingPage} from "./LoadingPage";
-import {Link} from "react-router-dom";
 
 export const UserPage = () => {
     const {token} = useContext(AuthContext);
     const {request, loading} = useHttp();
     const [user, setUser] = useState(null);
+    const history = useHistory();
+
     const userId = useParams().id;
 
     const getUser = useCallback(async () => {
@@ -23,26 +24,32 @@ export const UserPage = () => {
         getUser()
     }, [getUser]);
 
+    const editRedirect = () => {
+        history.push(`/editUser/${user._id}`)
+    };
+
+    const removeRedirect = () => {
+        history.push(`/deleteUser/${user._id}`)
+    };
+
     if (loading) {
         return <LoadingPage/>
     }
     return (
-        <div>
+        <>
             {user &&
-            <div>
+            <div className='user-page'>
                 <p>User name: {user.userName}</p>
                 <p>First name: {user.firstName}</p>
                 <p>Last name: {user.lastName}</p>
                 <p>Email: {user.email}</p>
                 <p>Phone number: {user.phone}</p>
-                <Link to={`/editUser/${user._id}`}>
-                    <button>Edit</button>
-                </Link>
-                <Link to={`/deleteUser/${user._id}`}>
-                    <button>Remove</button>
-                </Link>
+                <div className='edit-remove-btns'>
+                    <button className='btn' onClick={editRedirect}>Edit</button>
+                    <button className='btn' onClick={removeRedirect}>Delete</button>
+                </div>
             </div>
             }
-        </div>
+        </>
     )
 };

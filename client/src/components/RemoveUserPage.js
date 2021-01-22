@@ -22,8 +22,9 @@ export const RemoveUserPage = () => {
     }, [auth, history, userId, request]);
 
     return (
-        <div>
-            <button onClick={removeUser}>Remove</button>
+        <div className='delete-msg'>
+            <h2>Are you sure you want to delete current user?</h2>
+            <button className='btn' onClick={removeUser}>Delete</button>
         </div>
     )
 };

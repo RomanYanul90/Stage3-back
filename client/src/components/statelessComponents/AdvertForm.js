@@ -19,7 +19,7 @@ export const AdvertForm = (props) => {
                 <label>Price</label>
                 <input type="text" name="price" defaultValue={props.defaultValues[3]} onChange={props.changeHandler}/>
             </div>
-            <button onClick={props.submitMethod}>Submit</button>
+            <button className='btn' onClick={props.submitMethod}>Submit</button>
         </form>
     )
 };

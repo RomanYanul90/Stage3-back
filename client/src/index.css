@@ -203,12 +203,30 @@ body, html {
     width: 100%;
 }
 
+.delete-msg{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.delete-msg h2{
+    margin-bottom: 10px;
+}
+
+.edit-remove-btns{
+    display: flex;
+    justify-content: space-between;
+}
+
 .btn {
+    cursor: pointer;
+    padding: 5px;
+    border: 2px solid black;
+    border-radius: 3px;
     background-color: #EAF8F3;
     font-size: 1em;
 }
-
-
 
 .user-card {
     color: black;
@@ -217,7 +235,14 @@ body, html {
     border: 0.1em solid gray;
 }
 
+.user-page p{
+   font-size: 1.5em;
+    padding-bottom: 10px;
+}
 
+.user-card p{
+    margin-bottom: 10px;
+}
 
 @media (min-width: 620px) {
     .container {

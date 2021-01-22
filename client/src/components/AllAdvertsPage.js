@@ -51,7 +51,6 @@ export const AllAdvertsPage = () => {
             <form className='search-form'>
                 <input type='text' name='title' placeholder='Title:' onChange={changeInputHandler}/>
                 <button className='btn' onClick={searchHandler}>Find advert by title</button>
-
             </form>
             {!adverts.length || loading ? <p>No adverts</p> : <AdvertsList adverts={adverts}/>}
         </section>

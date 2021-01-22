@@ -29,7 +29,7 @@ export const AdvertsList = ({adverts}) => {
                 </select>
             </div>
 
-            {sortAdverts(adverts, sortParam).map((el, index) => {
+            {sortAdverts(adverts, sortParam).map((el) => {
                 return <div key={el._id}>
                     <Link to={`/advert/${el._id}`}>
                         <AdvertCard advert={el}/>
