@@ -13,8 +13,92 @@ body, html {
 .container {
     display: flex;
     flex-direction: column;
+    /*align-items: center;*/
+    /*justify-content: center;*/
     max-width: 1200px;
     margin: 1.25em;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.start-page-menu {
+    order: 1;
+    border: 0.1em solid gray;
+    padding: 1.5em;
+    min-width: 300px;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.start-page-link {
+    font-size: 1.5em;
+    text-decoration: none;
+}
+
+.login-section {
+    order: 2;
+    width: 300px;
+}
+
+.login-section h2 {
+    margin-bottom: 10px;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.login-form-labels {
+    display: flex;
+    flex-direction: column;
+    margin-right: 20px;
+}
+.login-form-labels label{
+    margin-bottom: 5px;
+}
+
+.login-form-inputs input {
+    width: 100%;
+    margin-bottom: 5px;
+    background-color: #D5F8EC;
+}
+
+.create-user{
+    order: 2;
+    width: 300px;
+}
+
+.create-user h2{
+    margin-bottom: 10px;
+}
+
+.basic-form div{
+    display: flex;
+    flex-direction: column;
+}
+
+.basic-form label{
+    margin-bottom: 2px;
+}
+
+.basic-form input{
+    margin-bottom: 5px;
+    background-color: #D5F8EC;
+}
+
+.basic-form textarea{
+    margin-bottom: 5px;
+    background-color: #D5F8EC;
 }
 
 .main-header {
@@ -62,7 +146,7 @@ body, html {
     margin-bottom: 20px;
 }
 
-.header-user-lable {
+.header-user-label {
     font-size: 1.5em;
 }
 
@@ -70,6 +154,29 @@ body, html {
     padding: 0.2em;
     border: 0.1em solid gray;
     border-radius: 0.2em;
+}
+
+.user-adverts-section{
+
+}
+
+.user-adverts-section h2{
+    margin-bottom: 10px;
+}
+
+.sort-select {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 10px;
+}
+
+.sort-select label {
+    font-size: 1em;
+}
+
+.sort-select select {
+    font-size: 1em;
+    background-color: #EAF8F3;
 }
 
 .advert-card {
@@ -101,20 +208,7 @@ body, html {
     font-size: 1em;
 }
 
-.sort-select {
-    display: flex;
-    flex-direction: row;
-    margin-bottom: 10px;
-}
 
-.sort-select label {
-    font-size: 1em;
-}
-
-.sort-select select {
-    font-size: 1em;
-    background-color: #EAF8F3;
-}
 
 .user-card {
     color: black;
@@ -123,18 +217,7 @@ body, html {
     border: 0.1em solid gray;
 }
 
-.user-form {
 
-}
-
-.user-form input {
-    background-color: #D5F8EC;
-}
-
-
-.user-form label {
-    max-width: 80px;
-}
 
 @media (min-width: 620px) {
     .container {
@@ -142,11 +225,14 @@ body, html {
         flex-direction: row;
     }
 
-    .main-header{
+    .main-header {
         width: 20%;
     }
 
     .main {
         width: 80%;
+    }
+
+    .header-navigation {
     }
 }

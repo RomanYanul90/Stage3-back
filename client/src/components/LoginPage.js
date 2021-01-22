@@ -30,19 +30,23 @@ export const LoginPage = () => {
         }
     };
     return (
-        <div>
+        <section className='login-section' >
             <h2>Log in</h2>
-            <form>
-                <div>
-                    <label>Email</label>
-                    <input type="email" name="email" onChange={changeHandler}/>
-                </div>
-                <div>
-                    <label>Password</label>
-                    <input type="password" name="password" onChange={changeHandler}/>
-                </div>
-                <button onClick={loginHandler}>Submit</button>
-            </form>
-        </div>
+                <form >
+                    <div className='login-form'>
+                        <div className='login-form-labels'>
+                            <label htmlFor='email'>Email</label>
+                            <label htmlFor='password'>Password</label>
+                        </div>
+                        <div className='login-form-inputs'>
+                            <input id='email' type="email" name="email" onChange={changeHandler}/>
+                            <input id='password' type="password" name="password" onChange={changeHandler}/>
+                        </div>
+                    </div>
+
+                    <button onClick={loginHandler}>Submit</button>
+                </form>
+        </section>
+
     )
 };

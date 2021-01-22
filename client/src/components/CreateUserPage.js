@@ -35,7 +35,7 @@ export const CreateUserPage = () => {
     }
 
     return (
-        <div>
+        <section className='create-user'>
             <h2>Create user</h2>
             <UserForm
                 changeHandler = {changeHandler}
@@ -43,6 +43,6 @@ export const CreateUserPage = () => {
                 defaultValues={[]}
                 isCreatePage={true}
             />
-        </div>
+        </section>
     )
 };

@@ -1,8 +1,8 @@
 import React from 'react';
 
 export const AdvertForm = (props) => {
-    return(
-        <form className='advert-form'>
+    return (
+        <form className='basic-form'>
             <div>
                 <label>Title</label>
                 <input type="text" name="title" defaultValue={props.defaultValues[0]} onChange={props.changeHandler}/>

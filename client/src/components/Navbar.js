@@ -49,7 +49,7 @@ export const Navbar = () => {
                     <li><NavLink to='/usersList'>All users</NavLink></li>
                     <li><a href='/' onClick={logoutHandler}>Log out</a></li>
                 </ul>
-                <p className='header-user-lable'>
+                <p className='header-user-label'>
                     User:
                     <NavLink className='header-userPage-link' to={`/userPage/${id}`}>
                         {user}

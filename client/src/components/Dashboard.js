@@ -5,7 +5,7 @@ import {LoginPage} from "./LoginPage";
 
 export const Dashboard = () => {
     return (
-        <div>
+        <>
             <Switch>
                 <Route path='/register'>
                     <CreateUserPage/>
@@ -15,11 +15,11 @@ export const Dashboard = () => {
                 </Route>
                 <Redirect to='/' />
             </Switch>
-            <div>
-                <Link to='/register'>Create user</Link>
-                <Link to='/login'>Log in</Link>
+            <div className='start-page-menu'>
+                <Link className='start-page-link' to='/register'>Create user</Link>
+                <Link className='start-page-link' to='/login'>Log in</Link>
             </div>
-        </div>
+        </>
 
     )
 };

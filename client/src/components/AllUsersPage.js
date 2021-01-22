@@ -48,12 +48,12 @@ export const AllUsersPage = () => {
     }
 
     return (
-        <div>
+        <section className='users-section'>
             <form className='search-form'>
                 <input type='text' name='userName' placeholder='UserName:' onChange={changeInputHandler}/>
                 <button  onClick={searchHandler}>Find by user name</button>
             </form>
             {!loading && <UsersList users={users}/>}
-        </div>
+        </section>
     )
 };

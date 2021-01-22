@@ -2,7 +2,7 @@ import React from "react";
 
 export const AdvertCard = ({advert}) => {
     return (
-        <div className='advert-card'>
+        <article className='advert-card'>
             <h2>{advert.title}</h2>
             <p>Category: {advert.category}</p>
             <p>Description: {advert.description}</p>
@@ -11,6 +11,6 @@ export const AdvertCard = ({advert}) => {
             <p>Created by: {advert.ownerUserName}</p>
             <p>Created: {new Date(advert.created).toLocaleString()}</p>
             {advert.modified && <p>Modified:{advert.modified}</p>}
-        </div>
+        </article>
     )
 }

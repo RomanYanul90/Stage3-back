@@ -28,9 +28,9 @@ export const UserAdvertsPage = () => {
     }
 
     return (
-        <div>
+        <section className='user-adverts-section'>
             <h2>My adverts</h2>
             {!loading&&<AdvertsList adverts={adverts}/>}
-        </div>
+        </section>
     )
 };

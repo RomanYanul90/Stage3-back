@@ -2,7 +2,7 @@ import React from 'react';
 
 export const UserForm = (props) => {
     return (
-        <form className='user-form'>
+        <form className='basic-form'>
             <div>
                 <label>First name</label>
                 <input type="text" name="firstName" defaultValue={props.defaultValues[0]}
