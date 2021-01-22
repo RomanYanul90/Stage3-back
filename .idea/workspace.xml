@@ -1,34 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1b57e755-6e85-4ce4-80b4-936e54f1958e" name="Default Changelist" comment="code style and components sort">
+    <list default="true" id="1b57e755-6e85-4ce4-80b4-936e54f1958e" name="Default Changelist" comment="code style">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/client/.eslintcache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/AdvertPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/AdvertPage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/AdvertsList.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/AdvertsList.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/AllAdvertsPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/AllAdvertsPage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/AllUsersPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/AllUsersPage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/ChoosenUserAdverts.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/ChoosenUserAdverts.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/CreateAdvertPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/CreateAdvertPage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/CreateUserPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/CreateUserPage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/Dashboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Dashboard.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/EditAdvertPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/EditAdvertPage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/EditUserPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/EditUserPage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/LoadingPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/LoadingPage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/LoginPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/LoginPage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/Navbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Navbar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/RemoveAdvertPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/RemoveAdvertPage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/RemoveUserPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/RemoveUserPage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/UserAdvertsPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/UserAdvertsPage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/UserCard.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/UserCard.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/UserPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/UserPage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/UsersList.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/UsersList.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/hooks/authHook.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/hooks/authHook.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/hooks/httpHook.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/hooks/httpHook.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/services/AdvertsServices.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/hooks/selectId.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/services/UsersSevices.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/AdvertServices.js" beforeDir="false" afterPath="$PROJECT_DIR$/services/AdvertServices.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -138,7 +114,9 @@
       <workItem from="1611007477612" duration="75000" />
       <workItem from="1611007793123" duration="2616000" />
       <workItem from="1611054125085" duration="28412000" />
-      <workItem from="1611090187680" duration="2171000" />
+      <workItem from="1611090187680" duration="2589000" />
+      <workItem from="1611174769360" duration="67000" />
+      <workItem from="1611319953558" duration="1687000" />
     </task>
     <task id="LOCAL-00001" summary="Create user and register">
       <created>1609707672303</created>
@@ -315,7 +293,14 @@
       <option name="project" value="LOCAL" />
       <updated>1611080946423</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="code style">
+      <created>1611092539031</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1611092539031</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -358,7 +343,8 @@
     <MESSAGE value="demo styles" />
     <MESSAGE value="Minor changes on server side" />
     <MESSAGE value="code style and components sort" />
-    <option name="LAST_COMMIT_MESSAGE" value="code style and components sort" />
+    <MESSAGE value="code style" />
+    <option name="LAST_COMMIT_MESSAGE" value="code style" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
