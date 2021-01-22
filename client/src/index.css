@@ -14,7 +14,7 @@ body, html {
     display: flex;
     flex-direction: column;
     /*align-items: center;*/
-    /*justify-content: center;*/
+    justify-content: center;
     max-width: 1200px;
     margin: 1.25em;
 }
@@ -181,9 +181,13 @@ body, html {
 
 .advert-card {
     color: black;
-    padding: 10px;
+    padding: 20px;
     margin-bottom: 20px;
     border: 0.1em solid gray;
+}
+
+.advert-card * {
+    margin-bottom: 10px;
 }
 
 .adverts-list a {
@@ -230,7 +234,7 @@ body, html {
 
 .user-card {
     color: black;
-    padding: 10px;
+    padding: 20px;
     margin-bottom: 20px;
     border: 0.1em solid gray;
 }
@@ -251,13 +255,16 @@ body, html {
     }
 
     .main-header {
-        width: 20%;
+        padding: 10px;
+        margin-right: 50px;
+        border-right: 0.1em solid black;
+
     }
 
     .main {
-        width: 80%;
     }
 
-    .header-navigation {
+    .header-navigation ul{
+        align-items: normal;
     }
 }
