@@ -20,7 +20,7 @@ body, html {
 
 .main {
     display: flex;
-    flex-direction: column;
+    /*flex-direction: column;*/
     align-items: center;
     justify-content: center;
 }
@@ -79,6 +79,10 @@ body, html {
     background-color: #D5F8EC;
 }
 
+.create-advert-section h2{
+    margin-bottom: 10px;
+}
+
 .create-user{
     order: 2;
     width: 300px;
@@ -96,7 +100,6 @@ body, html {
 .basic-form label{
     margin-bottom: 2px;
     font-size: 1.3em;
-
 }
 
 .basic-form input{
@@ -132,15 +135,13 @@ body, html {
 .header-navigation {
     display: flex;
     flex-direction: column;
-    width: 100%;
-    align-items: center;
     margin-bottom: 20px;
 }
 
 .header-navigation ul {
     display: flex;
     flex-direction: column;
-    width: 100%;
+    /*width: 100%;*/
     align-items: center;
     margin-bottom: 10px;
 }
@@ -180,8 +181,6 @@ body, html {
 }
 
 .sort-select {
-    display: flex;
-    flex-direction: row;
     margin-bottom: 10px;
 }
 
@@ -214,9 +213,7 @@ body, html {
 .search-form {
     display: flex;
     flex-direction: column;
-    /*justify-content: space-between;*/
     margin-bottom: 10px;
-
 }
 
 .search-form label{
@@ -288,7 +285,6 @@ body, html {
         margin-right: 50px;
         border-right: 0.1em solid black;
         border-bottom: none;
-
     }
 
     .main {

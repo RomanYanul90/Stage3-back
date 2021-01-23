@@ -14,7 +14,9 @@ export const UserCard = ({user}) => {
                     <p>Email: {user.email}</p>
                     <p>Phone number: {user.phone}</p>
                 </div>
-                <button className='btn' onClick={showHandler}>Show adverts created by this user</button>
+                <button className='btn' onClick={showHandler}>
+                    {showAdverts===false ? "Show " : "Hide "}adverts created by this user
+                </button>
             </div>
             {showAdverts && <ChoosenUserAdverts ownerName={user.userName}/> }
         </>

@@ -7,7 +7,6 @@ import {AdvertForm} from './statelessComponents/AdvertForm';
 import {selectId} from '../hooks/selectId';
 
 export const CreateAdvertPage = () => {
-    // const [user, setUser] = useState(null);
     const history = useHistory();
     const auth = useContext(AuthContext);
     const {error, request, clearError} = useHttp();
@@ -35,26 +34,23 @@ export const CreateAdvertPage = () => {
 
         try {
             const user = await request(`/api/auth/user/${userId}`, "GET", null, {Authorization: `Bearer ${auth.token}`});
-            // setUser(user.userName);
             const data = await request('/api/advert/create', "POST", {
                 ...form,
                 userName: user.userName
             }, {Authorization: `Bearer ${auth.token}`});
             history.push(`/advert/${data.advert._id}`);
-
             message(data.message)
         } catch (e) {
         }
     };
-
     return (
-        <div>
+        <section className='create-advert-section'>
             <h2>Create advert</h2>
             <AdvertForm
                 changeHandler={changeHandler}
                 submitMethod={createAdvertHandler}
                 defaultValues={[]}
             />
-        </div>
+        </section>
     )
 };
