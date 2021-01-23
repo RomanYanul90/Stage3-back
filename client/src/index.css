@@ -26,25 +26,28 @@ body, html {
 }
 
 .start-page-menu {
-    order: 1;
-    border: 0.1em solid gray;
-    padding: 1.5em;
-    min-width: 300px;
-    height: 200px;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    min-width: 300px;
+    height: 200px;
+    padding: 1.5em;
+    border: 0.1em solid black;
     margin-bottom: 20px;
+
+    order: 1;
 }
 
 .start-page-link {
     font-size: 1.5em;
+
     text-decoration: none;
 }
 
 .login-section {
-    order: 2;
     width: 300px;
+
+    order: 2;
 }
 
 .login-section h2 {
@@ -62,59 +65,69 @@ body, html {
     flex-direction: column;
     margin-right: 20px;
 }
-.login-form-labels label{
+
+.login-form-labels label {
     display: flex;
     align-items: center;
     height: 30px;
-    font-size: 1.3em;
     margin-bottom: 5px;
+
+    font-size: 1.3em;
+
 }
 
 .login-form-inputs input {
-    border-radius: 5px;
-    height: 30px;
-    font-size: 1em;
     width: 100%;
+    height: 30px;
+    border-radius: 5px;
     margin-bottom: 5px;
+
     background-color: #D5F8EC;
+
+    font-size: 1em;
 }
 
-.create-advert-section h2{
+.create-advert-section h2 {
     margin-bottom: 10px;
 }
 
-.create-user{
-    order: 2;
+.create-user {
     width: 300px;
+    order: 2;
 }
 
-.create-user h2{
+.create-user h2 {
     margin-bottom: 10px;
 }
 
-.basic-form div{
+.basic-form div {
     display: flex;
     flex-direction: column;
 }
 
-.basic-form label{
+.basic-form label {
     margin-bottom: 2px;
     font-size: 1.3em;
 }
 
-.basic-form input{
+.basic-form input {
     height: 30px;
-    font-size: 1em;
     border-radius: 5px;
     margin-bottom: 5px;
+
     background-color: #D5F8EC;
+
+    font-size: 1em;
+
 }
 
-.basic-form textarea{
-    margin-bottom: 5px;
-    border-radius: 5px;
-    background-color: #D5F8EC;
+.basic-form textarea {
     border: 1px solid black;
+    border-radius: 5px;
+    margin-bottom: 5px;
+
+    background-color: #D5F8EC;
+
     font-size: 1em;
 }
 
@@ -127,9 +140,10 @@ body, html {
 }
 
 .header-title {
+    margin-bottom: 0.5em;
+
     font-size: 2em;
     font-weight: bold;
-    margin-bottom: 0.5em;
 }
 
 .header-navigation {
@@ -146,19 +160,24 @@ body, html {
 }
 
 .header-navigation li {
-    font-size: 1.5em;
-    color: black;
     padding: 0.2em;
-    margin-bottom: 0.5em;
-    list-style-type: none;
     border: 0.1em solid gray;
     border-radius: 0.2em;
+    margin-bottom: 0.5em;
+
+    color: black;
+
+    font-size: 1.5em;
+
+    list-style-type: none;
 }
 
 .header-navigation a {
-    color: black;
-    text-decoration: none;
     margin-bottom: 20px;
+
+    color: black;
+
+    text-decoration: none;
 }
 
 .header-user-label {
@@ -171,11 +190,10 @@ body, html {
     border-radius: 0.2em;
 }
 
-.user-adverts-section{
-
+.user-adverts-section {
 }
 
-.user-adverts-section h2{
+.user-adverts-section h2 {
     margin-bottom: 10px;
 }
 
@@ -188,16 +206,18 @@ body, html {
 }
 
 .sort-select select {
-    font-size: 1em;
     background-color: #EAF8F3;
+
+    font-size: 1em;
 }
 
 .advert-card {
     width: 300px;
-    color: black;
     padding: 20px;
-    margin-bottom: 20px;
     border: 0.1em solid gray;
+    margin-bottom: 20px;
+
+    color: black;
 }
 
 .advert-card * {
@@ -215,12 +235,12 @@ body, html {
     margin-bottom: 10px;
 }
 
-.search-form label{
+.search-form label {
     font-size: 1.5em;
     margin-bottom: 10px;
 }
 
-.search-form-input{
+.search-form-input {
     display: flex;
     flex-direction: row;
     margin-bottom: 10px;
@@ -231,52 +251,57 @@ body, html {
     width: 100%;
 }
 
-.delete-msg{
+.delete-msg {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
 
-.delete-msg h2{
+.delete-msg h2 {
     margin-bottom: 10px;
 }
 
-.edit-remove-btns{
+.edit-remove-btns {
     display: flex;
     justify-content: space-between;
 }
 
 .btn {
-    cursor: pointer;
     padding: 5px;
     border: 2px solid black;
     border-radius: 3px;
+
     background-color: #EAF8F3;
+
     font-size: 1em;
+
+    cursor: pointer;
 }
 
 .user-card {
-    color: black;
     padding: 20px;
-    margin-bottom: 20px;
     border: 0.1em solid gray;
+    margin-bottom: 20px;
+
+    color: black;
 }
 
-.user-page p{
-   font-size: 1.5em;
+.user-page p {
     padding-bottom: 10px;
+
+    font-size: 1.5em;
 }
 
-.user-card p{
+.user-card p {
     margin-bottom: 10px;
 }
 
 @media (min-width: 620px) {
     .container {
-        margin: 1.25em auto;
         flex-direction: row;
         justify-content: space-between;
+        margin: 1.25em auto;
     }
 
     .main-header {
@@ -290,7 +315,7 @@ body, html {
         width: 100%;
     }
 
-    .header-navigation ul{
+    .header-navigation ul {
         align-items: normal;
     }
 }
