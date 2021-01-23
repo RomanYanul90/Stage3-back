@@ -50,9 +50,9 @@ export const AllUsersPage = () => {
     return (
         <section className='users-section'>
             <form className='search-form'>
-                <label htmlFor='title'>Find user by username</label>
+                <label htmlFor='userName'>Find user by username</label>
                 <div className='search-form-input'>
-                    <input type='text' name='userName' placeholder='UserName:' onChange={changeInputHandler}/>
+                    <input id='userName' type='text' name='userName' placeholder='UserName:' onChange={changeInputHandler}/>
                     <button className='btn' onClick={searchHandler}>Search</button>
                 </div>
             </form>
