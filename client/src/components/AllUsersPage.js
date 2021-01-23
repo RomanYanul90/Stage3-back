@@ -32,7 +32,7 @@ export const AllUsersPage = () => {
         setSearchParams({userName: e.target.value})
 
     };
-    const searchHandler = async (e)=>{
+    const searchHandler = async (e) => {
         e.preventDefault();
         try {
             const fetched = await request(`/api/auth/byUserName/${searchParams.userName}`, 'GET', null,
@@ -50,8 +50,11 @@ export const AllUsersPage = () => {
     return (
         <section className='users-section'>
             <form className='search-form'>
-                <input type='text' name='userName' placeholder='UserName:' onChange={changeInputHandler}/>
-                <button  onClick={searchHandler}>Find by user name</button>
+                <label htmlFor='title'>Find user by username</label>
+                <div className='search-form-input'>
+                    <input type='text' name='userName' placeholder='UserName:' onChange={changeInputHandler}/>
+                    <button className='btn' onClick={searchHandler}>Search</button>
+                </div>
             </form>
             {!loading && <UsersList users={users}/>}
         </section>

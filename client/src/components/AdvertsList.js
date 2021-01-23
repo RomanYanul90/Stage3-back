@@ -20,8 +20,8 @@ export const AdvertsList = ({adverts}) => {
     return (
         <div className='adverts-list'>
             <div className='sort-select'>
-                <label>Sort by: </label>
-                <select onChange={(e) => {
+                <label htmlFor='sort'>Sort by: </label>
+                <select id='sort' onChange={(e) => {
                     setSortParam(e.target.value)
                 }}>
                     <option value='price'>Price</option>

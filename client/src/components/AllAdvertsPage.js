@@ -24,10 +24,6 @@ export const AllAdvertsPage = () => {
         fetchAdverts()
     }, [fetchAdverts]);
 
-    if (loading) {
-        return <LoadingPage/>
-    }
-
     const changeInputHandler = (e) => {
         setSearchParams({title: e.target.value})
 
@@ -49,8 +45,13 @@ export const AllAdvertsPage = () => {
     return (
         <section className='all-adverts-section'>
             <form className='search-form'>
-                <input type='text' name='title' placeholder='Title:' onChange={changeInputHandler}/>
-                <button className='btn' onClick={searchHandler}>Find advert by title</button>
+                <label htmlFor='title'>Find advert by title</label>
+                <div className='search-form-input'>
+                    <input id='title' type='text' name='title' placeholder='Title:' onChange={changeInputHandler}/>
+                    <button className='btn' onClick={searchHandler}>Search</button>
+                </div>
+                {/*<input id='title' type='text' name='title' placeholder='Title:' onChange={changeInputHandler}/>*/}
+                {/*<button className='btn' onClick={searchHandler}>Search</button>*/}
             </form>
             {!adverts.length || loading ? <p>No adverts</p> : <AdvertsList adverts={adverts}/>}
         </section>

@@ -1,18 +1,18 @@
 import React, {useState, useCallback, useContext, useEffect} from 'react'
-import {useParams,useHistory} from "react-router-dom";
+import {useParams, useHistory} from "react-router-dom";
 import {useHttp} from "../hooks/httpHook";
 import {AuthContext} from "../context/AuthContext";
 import {LoadingPage} from "./LoadingPage";
 import {AdvertCard} from "./statelessComponents/AdvertCard";
 import {selectId} from '../hooks/selectId';
 
-export const AdvertPage = () => { 
+export const AdvertPage = () => {
     const {request, loading} = useHttp();
     const [advert, setAdvert] = useState(null);
     const history = useHistory();
     const auth = useContext(AuthContext);
     const advertId = useParams().id;
-    
+
     let idFromAuth = undefined;
     if (auth.userId) {
         idFromAuth = auth.userId
@@ -22,7 +22,8 @@ export const AdvertPage = () => {
 
     const getAdvert = useCallback(async () => {
         try {
-            const result = await request(`/api/advert/byId/${advertId}`, "GET", null, {Authorization: `Bearer ${auth.token}`});
+            const result = await request(`/api/advert/byId/${advertId}`, "GET", null,
+                {Authorization: `Bearer ${auth.token}`});
             if (userId !== result.ownerId) {
                 await request(`/api/advert/editAdvert/${result._id}`, "PATCH", {
                     views: result.views + 1
@@ -31,7 +32,7 @@ export const AdvertPage = () => {
             setAdvert(result)
         } catch (e) {
         }
-    }, [auth.token, advertId, request,userId]);
+    }, [auth.token, advertId, request, userId]);
 
     useEffect(() => {
         getAdvert()

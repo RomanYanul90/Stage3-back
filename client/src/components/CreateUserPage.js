@@ -32,7 +32,7 @@ export const CreateUserPage = () => {
             message(data.message)
         } catch (e) {
         }
-    }
+    };
 
     return (
         <section className='create-user'>

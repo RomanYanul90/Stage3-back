@@ -1,7 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1b57e755-6e85-4ce4-80b4-936e54f1958e" name="Default Changelist" comment="Styling components done">
+    <list default="true" id="1b57e755-6e85-4ce4-80b4-936e54f1958e" name="Default Changelist" comment="Minor changes">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/client/.eslintcache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/AdvertPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/AdvertPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/AdvertsList.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/AdvertsList.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/AllAdvertsPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/AllAdvertsPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/AllUsersPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/AllUsersPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/CreateUserPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/CreateUserPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/statelessComponents/AdvertForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/statelessComponents/AdvertForm.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/statelessComponents/UserForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/statelessComponents/UserForm.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/index.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
