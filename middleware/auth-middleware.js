@@ -1,5 +1,5 @@
-import jwt from 'jsonwebtoken'
-import config from '../config/default.json'
+import jwt from 'jsonwebtoken';
+import config from '../config/default.json';
 
 export default (req, res, next) => {
     if (req.method === 'OPTIONS') {
@@ -16,4 +16,4 @@ export default (req, res, next) => {
     } catch (e) {
         res.status(401).json({message: "Non auth"});
     }
-}
+};

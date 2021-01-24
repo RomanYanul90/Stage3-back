@@ -8,6 +8,7 @@ export const AdvertsList = ({adverts}) => {
         return <p>There is no adverts created by current user</p>
     }
     const sortAdverts = (adverts, sortParam) => {
+        // eslint-disable-next-line array-callback-return
         return adverts.sort((a, b) => {
             if (sortParam === 'price') {
                 return a.price - b.price

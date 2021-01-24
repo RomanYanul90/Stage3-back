@@ -10,7 +10,7 @@ export const AdvertCard = ({advert}) => {
             <p>Views: {advert.views}</p>
             <p>Created by: {advert.ownerUserName}</p>
             <p>Created: {new Date(advert.created).toLocaleString()}</p>
-            {advert.modified && <p>Modified:{advert.modified}</p>}
+            {advert.modified && <p>Modified:{new Date(advert.modified).toLocaleString()}</p>}
         </article>
     )
-}
+};

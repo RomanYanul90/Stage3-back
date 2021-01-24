@@ -1,9 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1b57e755-6e85-4ce4-80b4-936e54f1958e" name="Default Changelist" comment="Styles changes">
+    <list default="true" id="1b57e755-6e85-4ce4-80b4-936e54f1958e" name="Default Changelist" comment="order css props">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/client/.eslintcache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/AdvertsList.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/AdvertsList.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/CreateUserPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/CreateUserPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/statelessComponents/AdvertCard.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/statelessComponents/AdvertCard.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/middleware/auth-middleware.js" beforeDir="false" afterPath="$PROJECT_DIR$/middleware/auth-middleware.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/middleware/validation-middleware.js" beforeDir="false" afterPath="$PROJECT_DIR$/middleware/validation-middleware.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/Advert.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/Advert.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/User.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/User.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -116,6 +124,7 @@
       <workItem from="1611090187680" duration="2589000" />
       <workItem from="1611174769360" duration="67000" />
       <workItem from="1611319953558" duration="18505000" />
+      <workItem from="1611493249952" duration="6224000" />
     </task>
     <task id="LOCAL-00001" summary="Create user and register">
       <created>1609707672303</created>
@@ -369,7 +378,14 @@
       <option name="project" value="LOCAL" />
       <updated>1611429125257</updated>
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL-00037" summary="order css props">
+      <created>1611429711055</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1611429711055</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -388,7 +404,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Create user and write user data to the database" />
     <MESSAGE value="Correct error handler" />
     <MESSAGE value="Auth process and save token to localStorage" />
     <MESSAGE value="Add navbar and new routes" />
@@ -413,7 +428,8 @@
     <MESSAGE value="Styling components" />
     <MESSAGE value="Styling components done" />
     <MESSAGE value="Styles changes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Styles changes" />
+    <MESSAGE value="order css props" />
+    <option name="LAST_COMMIT_MESSAGE" value="order css props" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

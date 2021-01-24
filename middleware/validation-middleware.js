@@ -1,4 +1,4 @@
-import {check, validationResult} from 'express-validator';
+import {check} from 'express-validator';
 
 export const advertValidationParams = [
     check('title', "Invalid title").isLength({min: 4, max: 50}),
@@ -14,7 +14,7 @@ export const userValidationParams = [
     check('lastName', "Invalid last name length.").isLength({min: 2, max: 20}),
     check('lastName', "Last name field should contain only letters.").isAlpha(),
     check('userName', "Invalid user name length.").isLength({min: 4, max: 20}),
-    // check('phone', "Invalid phone input").isMobilePhone("any"),
+    check('phone', "Invalid phone input").isMobilePhone("any"),
     check('password', "Invalid password length").isLength({min: 8})
 ];
 

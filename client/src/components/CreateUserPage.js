@@ -39,7 +39,7 @@ export const CreateUserPage = () => {
     };
 
     return (
-        <section className='create-user'>
+        <section className='create-user-section'>
             <h2>Create user</h2>
             <UserForm
                 changeHandler = {changeHandler}

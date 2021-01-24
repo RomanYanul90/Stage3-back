@@ -29,11 +29,11 @@ body, html {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    min-width: 300px;
-    height: 200px;
+    min-width: 18.75em;
+    height: 12.5em;
     padding: 1.5em;
     border: 0.1em solid black;
-    margin-bottom: 20px;
+    margin-bottom: 1.25em;
 
     order: 1;
 }
@@ -45,13 +45,13 @@ body, html {
 }
 
 .login-section {
-    width: 300px;
+    width: 18.75em;
 
     order: 2;
 }
 
 .login-section h2 {
-    margin-bottom: 10px;
+    margin-bottom:  0.417em;
 }
 
 .login-form {
@@ -63,14 +63,14 @@ body, html {
 .login-form-labels {
     display: flex;
     flex-direction: column;
-    margin-right: 20px;
+    margin-right: 1.25em;
 }
 
 .login-form-labels label {
     display: flex;
     align-items: center;
-    height: 30px;
-    margin-bottom: 5px;
+    height: 1.4423em;
+    margin-bottom: 0.2403em;
 
     font-size: 1.3em;
 
@@ -78,9 +78,9 @@ body, html {
 
 .login-form-inputs input {
     width: 100%;
-    height: 30px;
-    border-radius: 5px;
-    margin-bottom: 5px;
+    height: 1.875em;
+    border-radius: 0.3125em;
+    margin-bottom: 0.3125em;
 
     background-color: #D5F8EC;
 
@@ -88,16 +88,16 @@ body, html {
 }
 
 .create-advert-section h2 {
-    margin-bottom: 10px;
+    margin-bottom: 0.4166em;
 }
 
-.create-user {
-    width: 300px;
+.create-user-section {
+    width: 18.75em;
     order: 2;
 }
 
-.create-user h2 {
-    margin-bottom: 10px;
+.create-user-section h2 {
+    margin-bottom: 0.4166em;
 }
 
 .basic-form div {
@@ -106,14 +106,15 @@ body, html {
 }
 
 .basic-form label {
-    margin-bottom: 2px;
+    margin-bottom: 0.096em;
+
     font-size: 1.3em;
 }
 
 .basic-form input {
-    height: 30px;
-    border-radius: 5px;
-    margin-bottom: 5px;
+    height: 1.875em;
+    border-radius: 0.3125em;
+    margin-bottom: 0.3125em;
 
     background-color: #D5F8EC;
 
@@ -122,9 +123,9 @@ body, html {
 }
 
 .basic-form textarea {
-    border: 1px solid black;
-    border-radius: 5px;
-    margin-bottom: 5px;
+    border: 0.0625em solid black;
+    border-radius: 0.3125em;
+    margin-bottom: 0.3125em;
 
     background-color: #D5F8EC;
 
@@ -136,7 +137,7 @@ body, html {
     flex-direction: column;
     align-items: center;
     border-bottom: 0.1em solid black;
-    margin-bottom: 20px;
+    margin-bottom: 1.25em;
 }
 
 .header-title {
@@ -149,14 +150,14 @@ body, html {
 .header-navigation {
     display: flex;
     flex-direction: column;
-    margin-bottom: 20px;
+    margin-bottom: 1.25em;
 }
 
 .header-navigation ul {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 10px;
+    margin-bottom: 0.625em;
 }
 
 .header-navigation li {
@@ -173,7 +174,7 @@ body, html {
 }
 
 .header-navigation a {
-    margin-bottom: 20px;
+    margin-bottom: 0.625em;
 
     color: black;
 
@@ -194,11 +195,11 @@ body, html {
 }
 
 .user-adverts-section h2 {
-    margin-bottom: 10px;
+    margin-bottom: 0.417em;
 }
 
 .sort-select {
-    margin-bottom: 10px;
+    margin-bottom: 0.625em;
 }
 
 .sort-select label {
@@ -206,22 +207,24 @@ body, html {
 }
 
 .sort-select select {
+    border-radius: 0.3125em;
     background-color: #EAF8F3;
 
     font-size: 1em;
 }
 
 .advert-card {
-    width: 300px;
-    padding: 20px;
+    width: 18.75em;
+    padding: 1.25em;
     border: 0.1em solid gray;
-    margin-bottom: 20px;
+    margin-bottom: 1.25em;
 
     color: black;
+
 }
 
 .advert-card * {
-    margin-bottom: 10px;
+    margin-bottom: 0.625em;
     word-break: break-all;
 }
 
@@ -232,21 +235,23 @@ body, html {
 .search-form {
     display: flex;
     flex-direction: column;
-    margin-bottom: 10px;
+    margin-bottom: 0.625em;
 }
 
 .search-form label {
+    margin-bottom: 0.417em;
+
     font-size: 1.5em;
-    margin-bottom: 10px;
 }
 
 .search-form-input {
     display: flex;
     flex-direction: row;
-    margin-bottom: 10px;
+    margin-bottom: 0.625em;
 }
 
 .search-form input {
+    padding: 0.625em;
     background-color: #D5F8EC;
     width: 100%;
 }
@@ -259,7 +264,7 @@ body, html {
 }
 
 .delete-msg h2 {
-    margin-bottom: 10px;
+    margin-bottom: 0.417em;
 }
 
 .edit-remove-btns {
@@ -268,9 +273,9 @@ body, html {
 }
 
 .btn {
-    padding: 5px;
-    border: 2px solid black;
-    border-radius: 3px;
+    padding: 0.3125em;
+    border: 0.125em solid black;
+    border-radius: 0.1875em;
 
     background-color: #EAF8F3;
 
@@ -280,21 +285,21 @@ body, html {
 }
 
 .user-card {
-    padding: 20px;
+    padding: 1.25em;
     border: 0.1em solid gray;
-    margin-bottom: 20px;
+    margin-bottom: 1.25em;
 
     color: black;
 }
 
 .user-page p {
-    padding-bottom: 10px;
+    padding-bottom: 0.417em;
 
     font-size: 1.5em;
 }
 
 .user-card p {
-    margin-bottom: 10px;
+    margin-bottom: 0.625em;
 }
 
 @media (min-width: 620px) {
@@ -305,8 +310,8 @@ body, html {
     }
 
     .main-header {
-        padding: 10px;
-        margin-right: 50px;
+        padding: 0.625em;
+        margin-right: 3.125em;
         border-right: 0.1em solid black;
         border-bottom: none;
     }
