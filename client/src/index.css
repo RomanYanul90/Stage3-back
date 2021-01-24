@@ -161,6 +161,7 @@ body, html {
 }
 
 .header-navigation li {
+    display: flex;
     padding: 0.2em;
     border: 0.1em solid gray;
     border-radius: 0.2em;
@@ -174,7 +175,7 @@ body, html {
 }
 
 .header-navigation a {
-    margin-bottom: 0.625em;
+    width: 100%;
 
     color: black;
 
