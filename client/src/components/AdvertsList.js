@@ -3,27 +3,27 @@ import {AdvertCard} from "./statelessComponents/AdvertCard";
 import {Link} from "react-router-dom";
 
 export const AdvertsList = ({adverts}) => {
-  const [sortParam, setSortParam] = useState('price');
+  const [sortParam, setSortParam] = useState("price");
   if (!adverts.length) {
-    return <p>There is no adverts created by current user</p>
+    return <p>There is no adverts created by current user</p>;
   }
   const sortAdverts = (adverts, sortParam) => {
     // eslint-disable-next-line array-callback-return
     return adverts.sort((a, b) => {
-      if (sortParam === 'price') {
-        return a.price - b.price
+      if (sortParam === "price") {
+        return a.price - b.price;
       }
-      if (sortParam === 'created') {
-        return Date.parse(b.created) - Date.parse(a.created)
+      if (sortParam === "created") {
+        return Date.parse(b.created) - Date.parse(a.created);
       }
-    })
+    });
   };
   return (
     <div className='adverts-list'>
       <div className='sort-select'>
         <label htmlFor='sort'>Sort by: </label>
         <select id='sort' onChange={(e) => {
-          setSortParam(e.target.value)
+          setSortParam(e.target.value);
         }}>
           <option value='price'>Price</option>
           <option value='created'>Date</option>
@@ -35,8 +35,8 @@ export const AdvertsList = ({adverts}) => {
           <Link to={`/advert/${el._id}`}>
             <AdvertCard advert={el}/>
           </Link>
-        </div>
+        </div>;
       })}
     </div>
-  )
+  );
 };

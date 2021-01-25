@@ -1,5 +1,5 @@
-import React from 'react';
-import {Switch, Route, Redirect} from 'react-router-dom';
+import React from "react";
+import {Switch, Route, Redirect} from "react-router-dom";
 import {UserAdvertsPage} from "./components/UserAdvertsPage";
 import {CreateAdvertPage} from "./components/CreateAdvertPage";
 import {AllAdvertsPage} from "./components/AllAdvertsPage";
@@ -7,10 +7,10 @@ import {Dashboard} from "./components/Dashboard";
 import {AdvertPage} from "./components/AdvertPage";
 import {AllUsersPage} from "./components/AllUsersPage";
 import {UserPage} from "./components/UserPage";
-import {EditAdvertPage} from './components/EditAdvertPage';
-import {RemoveAdvertPage} from './components/RemoveAdvertPage';
-import {EditUserPage} from './components/EditUserPage';
-import {RemoveUserPage} from './components/RemoveUserPage';
+import {EditAdvertPage} from "./components/EditAdvertPage";
+import {RemoveAdvertPage} from "./components/RemoveAdvertPage";
+import {EditUserPage} from "./components/EditUserPage";
+import {RemoveUserPage} from "./components/RemoveUserPage";
 
 export const useRoutes = isAuth => {
   if (isAuth) {
@@ -51,7 +51,7 @@ export const useRoutes = isAuth => {
         </Route>
         <Redirect to='/createAdvert'/>
       </Switch>
-    )
+    );
   }
 
   return (
@@ -61,5 +61,5 @@ export const useRoutes = isAuth => {
       </Route>
       <Redirect to='/'/>
     </Switch>
-  )
+  );
 };
