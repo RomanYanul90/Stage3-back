@@ -1,8 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1b57e755-6e85-4ce4-80b4-936e54f1958e" name="Default Changelist" comment="Styles in em">
-      <change beforePath="$PROJECT_DIR$/client/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/index.css" afterDir="false" />
+    <list default="true" id="1b57e755-6e85-4ce4-80b4-936e54f1958e" name="Default Changelist" comment="Minor changes">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/AdvertsList.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/AdvertsList.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/routes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/AdvertControllers.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/AdvertControllers.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/UserControllers.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/UserControllers.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/advert-routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/advert-routes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/auth-routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/auth-routes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/AdvertServices.js" beforeDir="false" afterPath="$PROJECT_DIR$/services/AdvertServices.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/UserServices.js" beforeDir="false" afterPath="$PROJECT_DIR$/services/UserServices.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,7 +45,7 @@
     <setting file="file://$PROJECT_DIR$/client/src/components/AllAdvertsPage.js" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/services/AdvertServices.js" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/routes/auth-routes.js" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/routes/advert-routes.js" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/routes/advert-routes.js" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/client/src/components/CreateAdvertPage.js" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/client/src/components/UserAdvertsPage.js" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/client/src/components/CreateUserPage.js" root0="FORCE_HIGHLIGHTING" />
@@ -115,7 +124,8 @@
       <workItem from="1611090187680" duration="2589000" />
       <workItem from="1611174769360" duration="67000" />
       <workItem from="1611319953558" duration="18505000" />
-      <workItem from="1611493249952" duration="6583000" />
+      <workItem from="1611493249952" duration="7867000" />
+      <workItem from="1611579910533" duration="2494000" />
     </task>
     <task id="LOCAL-00001" summary="Create user and register">
       <created>1609707672303</created>
@@ -383,7 +393,14 @@
       <option name="project" value="LOCAL" />
       <updated>1611500204097</updated>
     </task>
-    <option name="localTasksCounter" value="39" />
+    <task id="LOCAL-00039" summary="Minor changes">
+      <created>1611500388172</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1611500388172</updated>
+    </task>
+    <option name="localTasksCounter" value="40" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -421,13 +438,13 @@
     <MESSAGE value="Minor changes on server side" />
     <MESSAGE value="code style and components sort" />
     <MESSAGE value="code style" />
-    <MESSAGE value="Minor changes" />
     <MESSAGE value="Styling components" />
     <MESSAGE value="Styling components done" />
     <MESSAGE value="Styles changes" />
     <MESSAGE value="order css props" />
     <MESSAGE value="Styles in em" />
-    <option name="LAST_COMMIT_MESSAGE" value="Styles in em" />
+    <MESSAGE value="Minor changes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Minor changes" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

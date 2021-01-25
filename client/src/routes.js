@@ -13,52 +13,53 @@ import {EditUserPage} from './components/EditUserPage';
 import {RemoveUserPage} from './components/RemoveUserPage';
 
 export const useRoutes = isAuth => {
-    if (isAuth) {
-        return (
-            <Switch>
-                <Route path='/userPage/:id' exact>
-                    <UserPage/>
-                </Route>
-                <Route path='/editUser/:id' exact>
-                    <EditUserPage/>
-                </Route>
-                <Route path='/deleteUser/:id' exact>
-                    <RemoveUserPage/>
-                </Route>
-                <Route path='/allAdverts' exact>
-                    <AllAdvertsPage/>
-                </Route>
-                <Route path='/usersList' exact>
-                    <AllUsersPage/>
-                </Route>
-                <Route path='/userAdverts' exact>
-                    <UserAdvertsPage/>
-                </Route>
-                <Route path='/advert/:id' exact>
-                    <AdvertPage/>
-                </Route>
-                <Route path='/editAdvert/:id' exact>
-                    <EditAdvertPage/>
-                </Route>
-                <Route path='/deleteAdvert/:id' exact>
-                    <RemoveAdvertPage/>
-                </Route>
-                <Route path='/createAdvert' exact>
-                    <CreateAdvertPage/>
-                </Route>
-                <Route path='/userPage' exact>
-                    <UserPage/>
-                </Route>
-                <Redirect to='/createAdvert'/>
-            </Switch>
-        )
-    }
+  if (isAuth) {
     return (
-        <Switch>
-            <Route path='/'>
-                <Dashboard/>
-            </Route>
-            <Redirect to='/'/>
-        </Switch>
+      <Switch>
+        <Route path='/userPage/:id' exact>
+          <UserPage/>
+        </Route>
+        <Route path='/editUser/:id' exact>
+          <EditUserPage/>
+        </Route>
+        <Route path='/deleteUser/:id' exact>
+          <RemoveUserPage/>
+        </Route>
+        <Route path='/allAdverts' exact>
+          <AllAdvertsPage/>
+        </Route>
+        <Route path='/usersList' exact>
+          <AllUsersPage/>
+        </Route>
+        <Route path='/userAdverts' exact>
+          <UserAdvertsPage/>
+        </Route>
+        <Route path='/advert/:id' exact>
+          <AdvertPage/>
+        </Route>
+        <Route path='/editAdvert/:id' exact>
+          <EditAdvertPage/>
+        </Route>
+        <Route path='/deleteAdvert/:id' exact>
+          <RemoveAdvertPage/>
+        </Route>
+        <Route path='/createAdvert' exact>
+          <CreateAdvertPage/>
+        </Route>
+        <Route path='/userPage' exact>
+          <UserPage/>
+        </Route>
+        <Redirect to='/createAdvert'/>
+      </Switch>
     )
+  }
+
+  return (
+    <Switch>
+      <Route path='/'>
+        <Dashboard/>
+      </Route>
+      <Redirect to='/'/>
+    </Switch>
+  )
 };
