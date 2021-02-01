@@ -28,6 +28,7 @@ export const AllAdvertsPage = () => {
     setSearchParams({title: e.target.value});
 
   };
+
   const searchHandler = async (e) => {
     e.preventDefault();
     try {
@@ -42,6 +43,7 @@ export const AllAdvertsPage = () => {
   if (loading) {
     return <LoadingPage/>;
   }
+
   return (
     <section className='all-adverts-section'>
       <form className='search-form'>

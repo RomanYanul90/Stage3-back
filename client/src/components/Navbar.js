@@ -57,6 +57,5 @@ export const Navbar = () => {
         </p>
       </nav>
     </header>
-
   );
 };

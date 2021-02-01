@@ -9,8 +9,8 @@ import {selectId} from "../hooks/selectId";
 export const AdvertPage = () => {
   const {request, loading} = useHttp();
   const [advert, setAdvert] = useState(null);
-  const history = useHistory();
   const auth = useContext(AuthContext);
+  const history = useHistory();
   const advertId = useParams().id;
 
   let idFromAuth = undefined;

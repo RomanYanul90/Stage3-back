@@ -4,9 +4,11 @@ import {Link} from "react-router-dom";
 
 export const AdvertsList = ({adverts}) => {
   const [sortParam, setSortParam] = useState("price");
+
   if (!adverts.length) {
     return <p>There is no adverts created by current user</p>;
   }
+
   const sortAdverts = (adverts, sortParam) => {
     // eslint-disable-next-line array-callback-return
     return adverts.sort((a, b) => {
@@ -18,6 +20,7 @@ export const AdvertsList = ({adverts}) => {
       }
     });
   };
+
   return (
     <div className='adverts-list'>
       <div className='sort-select'>

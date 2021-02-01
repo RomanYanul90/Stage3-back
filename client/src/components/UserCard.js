@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import {ChoosenUserAdverts} from "./ChoosenUserAdverts";
 
 export const UserCard = ({user}) => {
