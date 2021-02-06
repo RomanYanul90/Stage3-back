@@ -16,11 +16,9 @@ export const Dashboard = () => {
         <Redirect to='/'/>
       </Switch>
       <div className='start-page-menu'>
-        <h2>Test</h2>
         <Link className='start-page-link' to='/register'>Create user</Link>
         <Link className='start-page-link' to='/login'>Log in</Link>
       </div>
     </>
-
   );
 };

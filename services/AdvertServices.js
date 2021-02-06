@@ -1,6 +1,6 @@
 import Advert from '../models/Advert';
 
-export const createAdvertService = async (title, description, category, price, created, userName, ownerId) => {
+const createAdvert = async (title, description, category, price, created, userName, ownerId) => {
   const advert = new Advert({
     title, description, category, price, created, ownerId, ownerUserName: userName,
   });
@@ -8,16 +8,27 @@ export const createAdvertService = async (title, description, category, price, c
   return advert;
 };
 
-export const getAllAdvertsService = async () => Advert.find();
+const getAllAdverts = async () => Advert.find();
 
-export const getAdvertByIdService = async (id) => Advert.findById(id);
+const getAdvertById = async (id) => Advert.findById(id);
 
-export const getCurrentUserAdvertsService = async (ownerId) => Advert.find({ ownerId });
+const getCurrentUserAdverts = async (ownerId) => Advert.find({ ownerId });
 
-export const getAdvertsByOwnerNameService = async (owner) => Advert.find({ ownerUserName: owner });
+const getAdvertsByOwnerName = async (owner) => Advert.find({ ownerUserName: owner });
 
-export const findAdvertByTitleService = async (title) => Advert.find({ title });
+const findAdvertByTitle = async (title) => Advert.find({ title });
 
-export const editAdvertService = async (id, updates) => Advert.findByIdAndUpdate(id, updates);
+const editAdvert = async (id, updates) => Advert.findByIdAndUpdate(id, updates);
 
-export const deleteAdvertService = async (id) => Advert.findByIdAndDelete(id);
+const deleteAdvert = async (id) => Advert.findByIdAndDelete(id);
+
+export default {
+  createAdvert,
+  getAllAdverts,
+  getAdvertById,
+  getCurrentUserAdverts,
+  getAdvertsByOwnerName,
+  findAdvertByTitle,
+  editAdvert,
+  deleteAdvert,
+};

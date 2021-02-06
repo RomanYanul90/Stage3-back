@@ -2,17 +2,9 @@ import { validationResult } from 'express-validator';
 import jwt from 'jsonwebtoken';
 import bcrypt from 'bcryptjs';
 import config from '../config/default.json';
-import {
-  createUserService,
-  loginUserService,
-  getAllUsersService,
-  getUserByIdService,
-  getUserByUserNameService,
-  editUserService,
-  deleteUserService,
-} from '../services/UserServices';
+import Services from '../services/UserServices';
 
-export const createUser = async (req, res) => {
+const createUser = async (req, res) => {
   try {
     const errors = validationResult(req);
 
@@ -25,8 +17,9 @@ export const createUser = async (req, res) => {
     } = req.body;
 
     try {
-      await createUserService(firstName, lastName, userName, email, phone, password);
+      await Services.createUser(firstName, lastName, userName, email, phone, password);
     } catch (e) {
+      console.log(e);
       return res.status(400).json({ message: 'User with the same name or email already exist.' });
     }
 
@@ -36,7 +29,7 @@ export const createUser = async (req, res) => {
   }
 };
 
-export const loginUser = async (req, res) => {
+const loginUser = async (req, res) => {
   try {
     const errors = validationResult(req);
 
@@ -45,7 +38,7 @@ export const loginUser = async (req, res) => {
     }
     const { email, password } = req.body;
 
-    const user = await loginUserService(email);
+    const user = await Services.loginUser(email);
     if (!user) {
       return res.status(400).json({ message: 'User dose not exist.' });
     }
@@ -68,52 +61,62 @@ export const loginUser = async (req, res) => {
   }
 };
 
-export const getAllUsers = async (req, res) => {
+const getAllUsers = async (req, res) => {
   try {
-    const users = await getAllUsersService();
+    const users = await Services.getAllUsers();
     res.json(users);
   } catch (e) {
     res.status(500).json({ message: 'Something went wrong.' });
   }
 };
 
-export const getUserById = async (req, res) => {
+const getUserById = async (req, res) => {
   const { id } = req.params;
   try {
-    const user = await getUserByIdService(id);
+    const user = await Services.getUserById(id);
     res.json(user);
   } catch (e) {
     res.status(500).json({ message: 'Something went wrong.' });
   }
 };
 
-export const getUserByUserName = async (req, res) => {
+const getUserByUserName = async (req, res) => {
   const { userName } = req.params;
   try {
-    const user = await getUserByUserNameService(userName);
+    const user = await Services.getUserByUserName(userName);
     res.json(user);
   } catch (e) {
     res.status(500).json({ message: 'Something went wrong.' });
   }
 };
 
-export const editUser = async (req, res) => {
+const editUser = async (req, res) => {
   try {
     const { id } = req.params;
     const updates = req.body;
-    const user = await editUserService(id, updates);
+    const user = await Services.editUser(id, updates);
     res.json(user);
   } catch (e) {
     res.status(500).json({ message: 'Something went wrong.' });
   }
 };
 
-export const deleteUser = async (req, res) => {
+const deleteUser = async (req, res) => {
   try {
     const { id } = req.params;
-    const user = await deleteUserService(id);
+    const user = await Services.deleteUser(id);
     res.json(user);
   } catch (e) {
     res.status(500).json({ message: 'Something went wrong.' });
   }
+};
+
+export default {
+  createUser,
+  loginUser,
+  getAllUsers,
+  getUserById,
+  getUserByUserName,
+  editUser,
+  deleteUser,
 };

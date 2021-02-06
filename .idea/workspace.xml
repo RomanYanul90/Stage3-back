@@ -4,21 +4,9 @@
     <list default="true" id="1b57e755-6e85-4ce4-80b4-936e54f1958e" name="Default Changelist" comment="eslint settings">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/client/.eslintcache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/AdvertPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/AdvertPage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/AdvertsList.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/AdvertsList.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/AllAdvertsPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/AllAdvertsPage.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/components/Dashboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Dashboard.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/Navbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Navbar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/UserCard.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/UserCard.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/controllers/AdvertControllers.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/AdvertControllers.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/controllers/UserControllers.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/UserControllers.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/middleware/auth-middleware.js" beforeDir="false" afterPath="$PROJECT_DIR$/middleware/auth-middleware.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/middleware/validation-middleware.js" beforeDir="false" afterPath="$PROJECT_DIR$/middleware/validation-middleware.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/Advert.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/Advert.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/User.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/User.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/advert-routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/advert-routes.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/auth-routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/auth-routes.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/services/AdvertServices.js" beforeDir="false" afterPath="$PROJECT_DIR$/services/AdvertServices.js" afterDir="false" />
@@ -39,6 +27,14 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/client/src/components/EditAdvertPage.js" root0="FORCE_HIGHLIGHTING" />
@@ -87,7 +83,7 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.standard" value="" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="vcs.Git" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -145,6 +141,10 @@
       <workItem from="1611839303362" duration="613000" />
       <workItem from="1612204872133" duration="191000" />
       <workItem from="1612205084159" duration="852000" />
+      <workItem from="1612205949748" duration="147000" />
+      <workItem from="1612264958932" duration="5093000" />
+      <workItem from="1612370635481" duration="2000" />
+      <workItem from="1612612955960" duration="391000" />
     </task>
     <task id="LOCAL-00001" summary="Create user and register">
       <created>1609707672303</created>
@@ -426,7 +426,14 @@
       <option name="project" value="LOCAL" />
       <updated>1611582605224</updated>
     </task>
-    <option name="localTasksCounter" value="41" />
+    <task id="LOCAL-00041" summary="eslint new settings">
+      <created>1612206057166</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1612206057166</updated>
+    </task>
+    <option name="localTasksCounter" value="42" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -445,7 +452,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Advert model added" />
     <MESSAGE value="added way to write advert info with creatorId to the DB" />
     <MESSAGE value="Render adverts by user" />
     <MESSAGE value="Search users by username and search adverts by title" />
@@ -470,7 +476,8 @@
     <MESSAGE value="Minor changes" />
     <MESSAGE value="Eslint new config" />
     <MESSAGE value="eslint settings" />
-    <option name="LAST_COMMIT_MESSAGE" value="eslint settings" />
+    <MESSAGE value="eslint new settings" />
+    <option name="LAST_COMMIT_MESSAGE" value="eslint new settings" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
