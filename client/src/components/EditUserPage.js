@@ -5,6 +5,7 @@ import {useParams, useHistory} from "react-router-dom";
 import {LoadingPage} from "./LoadingPage";
 import {useMessage} from "../hooks/errorHook";
 import {UserForm} from "./statelessComponents/UserForm";
+import {getUserById, editUser} from "../api/api";
 
 export const EditUserPage = () => {
   const auth = useContext(AuthContext);
@@ -23,8 +24,7 @@ export const EditUserPage = () => {
 
   const getUser = useCallback(async () => {
     try {
-      const result = await request(`/api/auth/user/${userId}`, "GET", null,
-        {Authorization: `Bearer ${auth.token}`});
+      const result = await getUserById(userId, auth.token);
       setUser(result);
     } catch (e) {
     }
@@ -51,14 +51,13 @@ export const EditUserPage = () => {
         message("Invalid email");
         return;
       }
-      await request(`/api/auth/editUser/${userId}`, "PATCH", {
-          firstName: form.firstName ? form.firstName : user.firstName,
-          lastName: form.lastName ? form.lastName : user.lastName,
-          userName: form.userName ? form.userName : user.userName,
-          email: form.email ? form.email : user.email,
-          phone: form.phone ? form.phone : user.phone,
-        },
-        {Authorization: `Bearer ${auth.token}`});
+      await editUser(userId, {
+        firstName: form.firstName ? form.firstName : user.firstName,
+        lastName: form.lastName ? form.lastName : user.lastName,
+        userName: form.userName ? form.userName : user.userName,
+        email: form.email ? form.email : user.email,
+        phone: form.phone ? form.phone : user.phone,
+      }, auth.token);
       history.push(`/userPage/${userId}`);
     } catch (e) {
     }

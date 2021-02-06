@@ -3,6 +3,7 @@ import {AuthContext} from "../context/AuthContext";
 import {LoadingPage} from "./LoadingPage";
 import {AdvertsList} from "./AdvertsList";
 import {useHttp} from "../hooks/httpHook";
+import {getCurrentUserAdverts} from "../api/api";
 
 export const UserAdvertsPage = () => {
   const [adverts, setAdverts] = useState([]);
@@ -11,9 +12,7 @@ export const UserAdvertsPage = () => {
 
   const fetchAdverts = useCallback(async () => {
     try {
-      const fetched = await request("/api/advert/userAdverts", "GET", null,
-        {Authorization: `Bearer ${token}`}
-      );
+      const fetched = await getCurrentUserAdverts(token);
       setAdverts(fetched);
     } catch (e) {
     }

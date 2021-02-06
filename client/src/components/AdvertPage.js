@@ -5,6 +5,7 @@ import {AuthContext} from "../context/AuthContext";
 import {LoadingPage} from "./LoadingPage";
 import {AdvertCard} from "./statelessComponents/AdvertCard";
 import {selectId} from "../hooks/selectId";
+import {getAdvertById,editAdvert} from "../api/api";
 
 export const AdvertPage = () => {
   const {request, loading} = useHttp();
@@ -22,12 +23,9 @@ export const AdvertPage = () => {
 
   const getAdvert = useCallback(async () => {
     try {
-      const result = await request(`/api/advert/byId/${advertId}`, "GET", null,
-        {Authorization: `Bearer ${auth.token}`});
+      const result = await getAdvertById(advertId,auth.token);
       if (userId !== result.ownerId) {
-        await request(`/api/advert/editAdvert/${result._id}`, "PATCH", {
-          views: result.views + 1
-        }, {Authorization: `Bearer ${auth.token}`});
+        await editAdvert(result._id,{ views: result.views + 1},auth.token);
       }
       setAdvert(result);
     } catch (e) {

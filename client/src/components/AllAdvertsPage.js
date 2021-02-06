@@ -3,6 +3,7 @@ import {useHttp} from "../hooks/httpHook";
 import {AuthContext} from "../context/AuthContext";
 import {LoadingPage} from "./LoadingPage";
 import {AdvertsList} from "./AdvertsList";
+import {getAllAdverts,getAdvertByTitle} from "../api/api";
 
 export const AllAdvertsPage = () => {
   const [adverts, setAdverts] = useState([]);
@@ -12,9 +13,7 @@ export const AllAdvertsPage = () => {
 
   const fetchAdverts = useCallback(async () => {
     try {
-      const fetched = await request("/api/advert/", "GET", null,
-        {Authorization: `Bearer ${token}`}
-      );
+      const fetched = await getAllAdverts(token);
       setAdverts(fetched);
     } catch (e) {
     }
@@ -26,15 +25,12 @@ export const AllAdvertsPage = () => {
 
   const changeInputHandler = (e) => {
     setSearchParams({title: e.target.value});
-
   };
 
   const searchHandler = async (e) => {
     e.preventDefault();
     try {
-      const fetched = await request(`/api/advert/byTitle/${searchParams.title}`, "GET", null,
-        {Authorization: `Bearer ${token}`}
-      );
+      const fetched = await getAdvertByTitle(searchParams.title,token);
       setAdverts(fetched);
     } catch (e) {
     }

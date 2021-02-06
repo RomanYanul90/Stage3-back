@@ -4,6 +4,7 @@ import {useHistory} from "react-router-dom";
 import {AuthContext} from "../context/AuthContext";
 import {useHttp} from "../hooks/httpHook";
 import {selectId} from "../hooks/selectId";
+import {getUserById} from "../api/api";
 
 export const Navbar = () => {
   const [user, setUser] = useState(null);
@@ -26,7 +27,7 @@ export const Navbar = () => {
 
   const getUserName = useCallback(async () => {
     try {
-      const user = await request(`/api/auth/user/${id}`, "GET", null, {Authorization: `Bearer ${auth.token}`});
+      const user = await getUserById(id,auth.token);
       setUser(user.userName);
     } catch (e) {
     }

@@ -3,6 +3,7 @@ import {useHttp} from "../hooks/httpHook";
 import {useMessage} from "../hooks/errorHook";
 import {UserForm} from "./statelessComponents/UserForm";
 import {useHistory} from "react-router-dom";
+import {createUser} from "../api/api";
 
 export const CreateUserPage = () => {
   const {error, request, clearError} = useHttp();
@@ -30,7 +31,7 @@ export const CreateUserPage = () => {
     e.preventDefault();
 
     try {
-      const data = await request("/api/auth/register", "POST", {...form});
+      const data = await createUser({...form});
       message(data.message);
       history.push("/login");
     } catch (e) {

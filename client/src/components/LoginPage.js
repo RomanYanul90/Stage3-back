@@ -2,6 +2,7 @@ import React, {useContext, useEffect, useState} from "react";
 import {useHttp} from "../hooks/httpHook";
 import {useMessage} from "../hooks/errorHook";
 import {AuthContext} from "../context/AuthContext";
+import {loginUser} from "../api/api";
 
 export const LoginPage = () => {
   const auth = useContext(AuthContext);
@@ -24,7 +25,7 @@ export const LoginPage = () => {
   const loginHandler = async (e) => {
     e.preventDefault();
     try {
-      const data = await request("/api/auth/login", "POST", {...form});
+      const data = await loginUser({...form});
       auth.login(data.token, data.userId);
     } catch (e) {
     }

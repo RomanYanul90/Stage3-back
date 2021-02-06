@@ -3,6 +3,7 @@ import {useHttp} from "../hooks/httpHook";
 import {AuthContext} from "../context/AuthContext";
 import {LoadingPage} from "./LoadingPage";
 import {AdvertsList} from "./AdvertsList";
+import {chosenUserAdverts} from "../api/api";
 
 export const ChoosenUserAdverts = ({ownerName}) => {
   const {token} = useContext(AuthContext);
@@ -11,8 +12,8 @@ export const ChoosenUserAdverts = ({ownerName}) => {
 
   const getAdverts = useCallback(async () => {
     try {
-      const result = await request(`/api/advert/byOwnerName/${ownerName}`, "GET", null,
-        {Authorization: `Bearer ${token}`});
+      console.log(ownerName);
+      const result = await chosenUserAdverts(ownerName,token);
       setAdverts(result);
     } catch (e) {
     }

@@ -5,10 +5,12 @@ import {useHistory} from "react-router-dom";
 import {AuthContext} from "../context/AuthContext";
 import {AdvertForm} from "./statelessComponents/AdvertForm";
 import {selectId} from "../hooks/selectId";
+import {getUserById, createAdvert} from "../api/api";
 
 export const CreateAdvertPage = () => {
   const history = useHistory();
   const auth = useContext(AuthContext);
+  const {token} = useContext(AuthContext);
   const {error, request, clearError} = useHttp();
   const [form, setForm] = useState({
     title: "",
@@ -33,11 +35,12 @@ export const CreateAdvertPage = () => {
     const userId = await selectId(auth.userId);
 
     try {
-      const user = await request(`/api/auth/user/${userId}`, "GET", null, {Authorization: `Bearer ${auth.token}`});
-      const data = await request("/api/advert/create", "POST", {
-        ...form,
-        userName: user.userName
-      }, {Authorization: `Bearer ${auth.token}`});
+      const user = await getUserById(userId, token);
+      const data = await createAdvert({
+          ...form,
+          userName: user.userName
+        },
+        token);
       history.push(`/advert/${data.advert._id}`);
       message(data.message);
     } catch (e) {

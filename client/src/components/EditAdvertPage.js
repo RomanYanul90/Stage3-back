@@ -4,6 +4,7 @@ import {AuthContext} from "../context/AuthContext";
 import {useParams, useHistory} from "react-router-dom";
 import {LoadingPage} from "./LoadingPage";
 import {AdvertForm} from "./statelessComponents/AdvertForm";
+import {getAdvertById,editAdvert} from "../api/api";
 
 export const EditAdvertPage = () => {
   const {token} = useContext(AuthContext);
@@ -21,7 +22,7 @@ export const EditAdvertPage = () => {
 
   const getAdvert = useCallback(async () => {
     try {
-      const result = await request(`/api/advert/byId/${advertId}`, "GET", null, {Authorization: `Bearer ${token}`});
+      const result = await getAdvertById(advertId,auth.token);
       setAdvert(result);
     } catch (e) {
     }
@@ -39,13 +40,13 @@ export const EditAdvertPage = () => {
     e.preventDefault();
 
     try {
-      await request(`/api/advert/editAdvert/${advertId}`, "PATCH", {
-        title: form.title ? form.title : advert.title,
-        category: form.category ? form.category : advert.category,
-        description: form.description ? form.description : advert.description,
-        price: form.price ? form.price : advert.price,
-        modified: Date.now()
-      }, {Authorization: `Bearer ${auth.token}`});
+      await editAdvert(advertId,{
+          title: form.title ? form.title : advert.title,
+          category: form.category ? form.category : advert.category,
+          description: form.description ? form.description : advert.description,
+          price: form.price ? form.price : advert.price,
+          modified: Date.now()
+        },token);
     } catch (e) {
     }
     history.push(`/advert/${advert._id}`);

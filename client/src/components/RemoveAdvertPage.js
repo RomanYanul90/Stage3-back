@@ -3,6 +3,7 @@ import {useParams} from "react-router-dom";
 import {useHttp} from "../hooks/httpHook";
 import {AuthContext} from "../context/AuthContext";
 import {useHistory} from "react-router-dom";
+import {removeAdvertById} from "../api/api";
 
 export const RemoveAdvertPage = () => {
   const {token} = useContext(AuthContext);
@@ -12,7 +13,7 @@ export const RemoveAdvertPage = () => {
 
   const removeAdvert = useCallback(async () => {
     try {
-      await request(`/api/advert/deleteAdvert/${advertId}`, "DELETE", null, {Authorization: `Bearer ${token}`});
+      await removeAdvertById(advertId,token);
       history.push("/userAdverts");
     } catch (e) {
     }

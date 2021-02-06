@@ -3,6 +3,7 @@ import {AuthContext} from "../context/AuthContext";
 import {LoadingPage} from "./LoadingPage";
 import {useHttp} from "../hooks/httpHook";
 import {UsersList} from "./UsersList";
+import {getAllUsers, findUserByUserName} from "../api/api";
 
 export const AllUsersPage = () => {
   const [users, setUsers] = useState([]);
@@ -12,9 +13,7 @@ export const AllUsersPage = () => {
 
   const fetchUsers = useCallback(async () => {
     try {
-      const fetched = await request("/api/auth/", "GET", null,
-        {Authorization: `Bearer ${token}`}
-      );
+      const fetched = await getAllUsers(token);
       setUsers(fetched);
     } catch (e) {
     }
@@ -35,9 +34,7 @@ export const AllUsersPage = () => {
   const searchHandler = async (e) => {
     e.preventDefault();
     try {
-      const fetched = await request(`/api/auth/byUserName/${searchParams.userName}`, "GET", null,
-        {Authorization: `Bearer ${token}`}
-      );
+      const fetched = await findUserByUserName(searchParams.userName, token);
       setUsers(fetched);
     } catch (e) {
     }

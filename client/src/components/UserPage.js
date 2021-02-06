@@ -3,6 +3,8 @@ import {useParams, useHistory} from "react-router-dom";
 import {useHttp} from "../hooks/httpHook";
 import {AuthContext} from "../context/AuthContext";
 import {LoadingPage} from "./LoadingPage";
+import {getUserById} from "../api/api";
+
 
 export const UserPage = () => {
   const {token} = useContext(AuthContext);
@@ -14,7 +16,7 @@ export const UserPage = () => {
 
   const getUser = useCallback(async () => {
     try {
-      const result = await request(`/api/auth/user/${userId}`, "GET", null, {Authorization: `Bearer ${token}`});
+      const result = await getUserById(userId, token);
       setUser(result);
     } catch (e) {
     }

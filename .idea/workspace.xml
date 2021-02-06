@@ -2,8 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1b57e755-6e85-4ce4-80b4-936e54f1958e" name="Default Changelist" comment="eslint settings">
+      <change afterPath="$PROJECT_DIR$/client/src/api/api.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/client/.eslintcache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/AdvertPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/AdvertPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/AllAdvertsPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/AllAdvertsPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/AllUsersPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/AllUsersPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/ChoosenUserAdverts.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/ChoosenUserAdverts.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/CreateAdvertPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/CreateAdvertPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/CreateUserPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/CreateUserPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/EditAdvertPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/EditAdvertPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/EditUserPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/EditUserPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/LoginPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/LoginPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/Navbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Navbar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/RemoveAdvertPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/RemoveAdvertPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/RemoveUserPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/RemoveUserPage.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,23 +46,24 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/client/src/components/CreateUserPage.js" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/client/src/components/AdvertsList.js" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/client/src/components/EditUserPage.js" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/client/src/components/EditAdvertPage.js" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/client/src/api/api.js" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/client/src/components/CreateAdvertPage.js" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/services/UserServices.js" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/client/src/components/AdvertPage.js" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/services/AdvertServices.js" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/controllers/UserControllers.js" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/client/src/components/AllAdvertsPage.js" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/controllers/AdvertControllers.js" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/client/src/components/UserAdvertsPage.js" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/client/src/components/statelessComponents/AdvertForm.js" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/index.js" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/routes/auth-routes.js" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/client/src/index.js" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/middleware/auth-middleware.js" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/client/src/routes.js" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/routes/advert-routes.js" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/client/src/components/EditUserPage.js" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/client/src/components/EditAdvertPage.js" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/services/UserServices.js" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/services/AdvertServices.js" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/controllers/UserControllers.js" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/controllers/AdvertControllers.js" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/client/src/components/statelessComponents/AdvertForm.js" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/client/src/index.js" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/client/src/routes.js" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/client/src/App.js" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/client/src/hooks/httpHook.js" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/client/src/hooks/authHook.js" root0="FORCE_HIGHLIGHTING" />
@@ -76,7 +91,7 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.standard" value="" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+    <property name="settings.editor.selected.configurable" value="vcs.Git" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -138,7 +153,7 @@
       <workItem from="1612264958932" duration="5093000" />
       <workItem from="1612370635481" duration="2000" />
       <workItem from="1612612955960" duration="391000" />
-      <workItem from="1612613953213" duration="305000" />
+      <workItem from="1612613953213" duration="15115000" />
     </task>
     <task id="LOCAL-00001" summary="Create user and register">
       <created>1609707672303</created>

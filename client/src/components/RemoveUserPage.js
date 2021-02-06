@@ -3,6 +3,8 @@ import {useParams} from "react-router-dom";
 import {useHttp} from "../hooks/httpHook";
 import {AuthContext} from "../context/AuthContext";
 import {useHistory} from "react-router-dom";
+import {removeUserById} from "../api/api";
+
 
 export const RemoveUserPage = () => {
   const auth = useContext(AuthContext);
@@ -14,7 +16,7 @@ export const RemoveUserPage = () => {
     e.preventDefault();
 
     try {
-      await request(`/api/auth/deleteUser/${userId}`, "DELETE", null, {Authorization: `Bearer ${auth.token}`});
+      await removeUserById(userId,auth.token);
       auth.logout();
       history.push("/");
     } catch (e) {
